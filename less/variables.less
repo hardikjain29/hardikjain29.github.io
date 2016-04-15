@@ -1,0 +1,27 @@
+/***********************************************************************************************/
+/* LESS VARIABLES */
+/***********************************************************************************************/
+@regular-text:	#2B2B2B; 		// Regular text
+@primary: 		#E34E47;		// Link and primary button
+@light-text:	#7A7A7A;		// Light text
+@light-bg:		#F7F7F7; 		// Very light BG
+@error: 		#D7262F; 		// Error
+@border: 		#DCDBDB;		// Border color
+@dark-bg: 		#1A2128;		// Dark BG
+@dark-bg-text: 	#687078;		// Text on Dark BG
+@intro-color-1: #2eb4e8;		// Blue color from the second intro block
+@intro-color-2: #a6c63a;		// Green color from the third intro block/available class
+
+
+
+
+
+/***********************************************************************************************/
+/* LESS MIXINS */
+/***********************************************************************************************/
+.transition(@property: color, @duration: .2s) {
+	-webkit-transition: @property @duration ease-out;
+	-moz-transition: @property @duration ease-out;
+	-o-transition: @property @duration ease-out;
+	transition: @property @duration ease-out;
+}

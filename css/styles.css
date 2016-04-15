@@ -1,52 +1,116 @@
-/*
-Bootstrap 3.1 overrides from http://hardikjain.com
+body{
+  
+	font-family: 'Montserrat', sans-serif;
+}
+.me {
+  display: block;
+  margin: 2em auto;
+  margin-bottom: 3em;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
 
-This CSS code should follow the 'bootstrap.css'
-in your HTML file.
+.social {
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  overflow: hidden;
+}
+.social a {
+  color: inherit;
+  text-decoration: none;
+}
+.social i {
+  margin: .3em;
+  cursor: pointer;
+  transition: color 300ms ease, margin-top 300ms ease;
+  transform: translateZ(0);
+}
+.social i:hover {
+  margin-top: -1px;
+}
+.social i#twitter:hover {
+  color: #77DDF6;
+}
+.social i#github:hover {
+  color: black;
+}
+.social i#linkedin:hover {
+  color: #0177B5;
+}
+.social i#google:hover {
+  color: #D43402;
+}
+.social i#mail:hover {
+  color: #F7B401;
+}
+.social i#facebook:hover {
+  color: #3b5998;
+}
+.social i#youtube:hover {
+  color: #c4302b;
+}
+.social i#skype:hover {
+  color: #00aff0;
+}
+#about{
+	margin: 170px auto;
+}
+#about p{
+	text-align: center;
+	color: white;
+}
 
-license: MIT
-author: hardikjain
-*/
-
-body {
- 
+.skills i{
+  font-size: 120px;
 }
-footer{
-	background-color: #2B2926;
-	min-width: 100%;
-	width: auto;
-	min-height: 100%;
-	height: auto;
+.b{
+display: inline-block;
 }
-nav ul{
-	color: #C5BCBC;
+.a{
+  display: none;
+  position: absolute;
 }
-i{
-	
-	color: black;
+.ico:hover .b{
+display: none;
 }
-.navbar{
-	background-color: #2B2926;
+.ico:hover .a{
+  display: inline;
 }
-@media screen and (max-width: 480px) {
-	.h{
-		display: none;
-	}
-	h1{
-		font-size: 22px;
-	}
-	.s{
-		display: inline !important;
-	}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="number"],
+.contact textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  font: 300 16px/24px "Source Sans Pro", Helvetica, Arial, sans-serif;
+  min-width: 100%;
+  padding: 19px;
 }
-.c a{
-color: black;
+.contact textarea {
+  margin-top: 12px;
+  height: 120px;
+  padding: 16px;
+  resize: none;
 }
-hr {
-    display: block;
-    height: 6px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0; 
+.contact input[type="submit"] {
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 120px;
+  height: 46px;
+  background-color: #2b2b2b;
+  color: #dbdbdb;
+  cursor: pointer;
+  font: bold 16px/24px "Source Sans Pro", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.contact .send {
+  margin-top: 44px;
+  text-align: center;
+}
+input:focus{
+border: none !important;
 }

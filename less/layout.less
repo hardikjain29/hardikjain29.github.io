@@ -1,0 +1,244 @@
+/***********************************************************************************************/
+/* GENERAL */
+/***********************************************************************************************/
+.heading {
+	text-align: center;
+	margin-top: 48px;
+}
+body{
+	background-color: #262626;
+	font-family: 'Montserrat', sans-serif;
+}
+.arr{
+	overflow: hidden;
+}
+
+/***********************************************************************************************/
+/* ABOUT */
+/***********************************************************************************************/
+#about{
+	margin:190px auto; 
+	p{
+		text-align: center;
+		color: white;
+	}
+	.me {
+  		display: block;
+  		margin: 2em auto;
+  		margin-bottom: 3em;
+  		width: 140px;
+  		height: 140px;
+ 		border-radius: 50%;
+ 		position: relative;
+  		z-index: 2;
+		}
+	.social {
+		  text-align: center;
+		  font-size: 2.5em;
+		  color: white;
+		  overflow: hidden;
+		a{
+			color: inherit;
+  			text-decoration: none;
+		}
+		i{
+			 margin: .3em;
+  			cursor: pointer;
+  			transition: color 300ms ease, margin-top 300ms ease;
+  			transform: translateZ(0);
+
+  			&:hover{
+  				margin-top: -1px;
+  			}
+		}
+		#twitter:hover {
+			  color: #77DDF6;
+			}
+			#github:hover {
+			  color: black;
+			}
+			#linkedin:hover {
+			  color: #0177B5;
+			}
+			#google:hover {
+			  color: #D43402;
+			}
+			#mail:hover {
+			  color: #F7B401;
+			}
+			#facebook:hover {
+			  color: #3b5998;
+			}
+			#youtube:hover {
+			  color: #c4302b;
+			}
+
+		}
+}
+/***********************************************************************************************/
+/* SKILLS */
+/***********************************************************************************************/
+.skills{
+	text-align: center;
+	.s{
+		color: #29FF91;
+	}
+	.heading{
+		padding-top: 20px;
+	}
+	background-color:#e6e6e6;
+	i{
+		font-size: 100px;
+	}
+	.b{
+		display: inline-block;
+	}
+	.a{
+	  display: none;
+	  position: relative;
+	}
+	.ico{
+		margin-top: 15px;
+		padding: 20px;
+		float: center;
+	}
+	.ico:hover{
+		cursor: pointer;
+	}
+	.ico:hover .b{
+		display: none;
+		
+	}
+	.ico:hover .a{
+	  	display: inline;
+	}
+}
+
+/***********************************************************************************************/
+/* RESUME */
+/***********************************************************************************************/
+.resume{
+	background-color: #0993c7;
+	padding: 35px !important;
+	p{
+		font-size: 28px;
+	}
+	i{
+		font-size: 45px;
+	}
+	.btn {
+		border: 1px solid black;
+		border-radius: 25px;
+		width: 120px;
+		height: 40px;
+		background-color: #2b2b2b;
+		color: #dbdbdb;
+		cursor: pointer;
+		font: bold 16px/24px "Source Sans Pro", Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+	
+	.transition(background-color, .4s);
+	
+	&:hover {
+		background-color:  #82b919;
+		color:  black;
+	}
+	
+	&:active {
+		background-color: lighten(@dark-bg, 5%);
+	}
+	
+	&.active {
+		background-color: white;
+		font-weight: bold;
+		
+		&:hover {
+			color: inherit;
+		}
+	}
+}
+
+}
+
+/***********************************************************************************************/
+/* WORK */
+/***********************************************************************************************/
+.work{
+	background-color: #3AFFF9;
+	text-align: center;
+	p{
+		font-size:20px;
+		padding-top: 14px;
+	}
+}
+/***********************************************************************************************/
+/* CONTACT */
+/***********************************************************************************************/
+.contact{
+	background-color: #F5FAF9;
+	p{
+		text-align: center;
+	}
+
+	input,textarea{
+		background-color:  #F5FAF9;
+		outline: none;
+  		-webkit-box-shadow: none !important;
+ 		 -moz-box-shadow: none !important;
+ 		 box-shadow: none !important;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	textarea {
+		border: none;
+		border-bottom: 1px solid black;
+		font: 300 16px/24px "Source Sans Pro", Helvetica, Arial, sans-serif;
+		min-width: 100%;
+		max-width: 100%;
+		padding: 19px;
+	}
+	
+	
+	textarea {
+		margin-top: 12px;
+		height: 120px;
+		padding: 16px;
+		resize:none;
+	}
+	
+	input[type="submit"] {
+		border: 1px solid black;
+		border-radius: 25px;
+		width: 120px;
+		height: 46px;
+		background-color: #2b2b2b;
+		color: #dbdbdb;
+		cursor: pointer;
+		font: bold 16px/24px "Source Sans Pro", Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		.transition(background-color, .4s);
+	
+	&:hover {
+		background-color:  #F5FAF9;
+		color:  black;
+	}
+	}
+	.send{
+		margin-top: 44px;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+}
+
+
+/***********************************************************************************************/
+/* FOOTER */
+/***********************************************************************************************/
+footer{
+	background-color: #002625;
+	padding: 40px;
+	text-align: center;
+	color: white;
+}
