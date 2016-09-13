@@ -1,6 +1,34 @@
 $(document).ready(function() {
   $('.i').hide();
-})
+  $("#portfolio-sorting li ").click(function() {
+    // Remove the current active class
+    $("#portfolio-sorting li.active").removeClass('active');
+    
+    // Add the active class to the clicked button
+    $(this).addClass('active');
+    
+    // Get the button text (filter value)
+    var filterValue = $(this).text().toLowerCase();
+    
+    // If we clicked "All", we show all items
+    if (filterValue === "all") {
+      $('.selector').slideDown(600);
+
+    } else {
+      // Else, we find the portfolio entries that match the clicked button
+      // And then add the class of .hidden
+      $(".selector").each(function() {
+        if (!$(this).hasClass(filterValue)) {
+          $(this).slideUp(600);
+        } else {
+          $(this).slideDown(600);
+        }
+      });
+    }
+    
+    return false;
+  });
+});
 
 $(window).load(function() {
   $('.i').show();
