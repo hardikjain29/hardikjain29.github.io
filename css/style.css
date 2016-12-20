@@ -201,7 +201,7 @@ body {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-color: rgba(122, 122, 122, 0.02);
+  background-color: #1EFF0A;
 }
 .work a{
   font-size: 24px;
