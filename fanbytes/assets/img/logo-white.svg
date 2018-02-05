@@ -1,0 +1,57 @@
+<svg width="235" height="35" viewBox="0 0 235 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>logo-white</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-9415 -24275)">
+<g id="logo-white">
+<g id="Group 2">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(9415 24275)" fill="url(#paint0_linear)"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(9415 24275)" fill="#FFFFFF"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(9426.81 24286.7)" fill="#FFFFFF"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(9438.62 24275)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<g id="FANBYTES">
+<use xlink:href="#path3_fill" transform="translate(9472.97 24280.7)" fill="#FFFFFF"/>
+<use xlink:href="#path4_fill" transform="translate(9472.97 24280.7)" fill="#FFFFFF"/>
+<use xlink:href="#path5_fill" transform="translate(9472.97 24280.7)" fill="#FFFFFF"/>
+<use xlink:href="#path6_fill" transform="translate(9472.97 24280.7)" fill="#FFFFFF"/>
+<use xlink:href="#path7_fill" transform="translate(9472.97 24280.7)" fill="#FFFFFF"/>
+<use xlink:href="#path8_fill" transform="translate(9472.97 24280.7)" fill="#FFFFFF"/>
+<use xlink:href="#path9_fill" transform="translate(9472.97 24280.7)" fill="#FFFFFF"/>
+<use xlink:href="#path10_fill" transform="translate(9472.97 24280.7)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-100.96 99.7276 -100.96 -99.7276 80.5602 55.1509)">
+<stop offset="0" stop-color="#FFF33B"/>
+<stop offset="0.0853499" stop-color="#FFD731"/>
+<stop offset="0.2296" stop-color="#FFAD22"/>
+<stop offset="0.3771" stop-color="#FF8B16"/>
+<stop offset="0.5265" stop-color="#FF700C"/>
+<stop offset="0.6783" stop-color="#FF5D05"/>
+<stop offset="0.8341" stop-color="#FF5201"/>
+<stop offset="1" stop-color="#FF4E00"/>
+</linearGradient>
+<path id="path0_fill" d="M 0 23.3333L 23.6217 0L 35.4326 0L 35.4326 11.6667L 11.8109 35L 0 35L 0 23.3333Z"/>
+<path id="path1_fill" d="M 11.8109 0L 0 0L 0 35L 11.8109 35L 11.8109 0Z"/>
+<path id="path2_fill" d="M 11.8109 0L 0 0L 0 11.6667L 11.8109 11.6667L 11.8109 0Z"/>
+<path id="path3_fill" d="M 6.24631 23.3675L 6.24631 14.9596L 14.6972 14.9596L 14.6972 9.93666L 6.24631 9.93666L 6.24631 5.5325L 17.4897 5.5325L 17.4897 0.436777L 0 0.436777L 0 23.3675L 6.24631 23.3675Z"/>
+<path id="path4_fill" d="M 24.8615 0.436777L 15.639 23.3675L 21.9221 23.3675L 23.649 18.927L 32.6878 18.927L 34.4147 23.3675L 41.0652 23.3675L 31.8427 0.436777L 24.8615 0.436777ZM 28.0949 7.53439L 28.2419 7.53439L 30.8874 14.3044L 25.4494 14.3044L 28.0949 7.53439Z"/>
+<path id="path5_fill" d="M 48.7953 0.436777L 42.8429 0.436777L 42.8429 23.3675L 48.5748 23.3675L 48.5748 9.79107L 58.5689 23.3675L 63.566 23.3675L 63.566 0.436777L 57.834 0.436777L 57.834 13.1397L 48.7953 0.436777Z"/>
+<path id="path6_fill" d="M 87.7118 17.0707C 87.7118 13.7949 85.6175 12.0113 82.8985 11.4654C 85.3603 11.065 87.0137 9.31789 87.0137 6.77003C 87.0137 2.91184 84.3315 0.436777 78.3791 0.436777L 67.099 0.436777L 67.099 23.3675L 79.1507 23.3675C 84.5519 23.3675 87.7118 21.0381 87.7118 17.0707ZM 78.1219 14.1588C 80.3265 14.1588 81.2818 15.0688 81.2818 16.3063C 81.2818 17.5438 80.3265 18.4174 78.1587 18.4174L 73.1616 18.4174L 73.1616 14.1588L 78.1219 14.1588ZM 73.1616 5.35051L 77.5708 5.35051C 79.7019 5.35051 80.547 6.29686 80.547 7.49799C 80.547 8.58994 79.7019 9.53628 77.5708 9.53628L 73.1616 9.53628L 73.1616 5.35051Z"/>
+<path id="path7_fill" d="M 99.457 8.69913L 94.2395 0.436777L 87.295 0.436777L 96.1868 14.6684L 96.1868 23.3675L 102.249 23.3675L 102.249 14.6684L 111.141 0.436777L 104.417 0.436777L 99.457 8.69913Z"/>
+<path id="path8_fill" d="M 126.221 23.3675L 126.221 5.5325L 134.268 5.5325L 134.268 0.436777L 112.075 0.436777L 112.075 5.5325L 120.012 5.5325L 120.012 23.3675L 126.221 23.3675Z"/>
+<path id="path9_fill" d="M 155.185 18.2718L 143.097 18.2718L 143.097 14.3044L 152.173 14.3044L 152.173 9.2815L 143.097 9.2815L 143.097 5.5325L 154.855 5.5325L 154.855 0.436777L 136.961 0.436777L 136.961 23.3675L 155.185 23.3675L 155.185 18.2718Z"/>
+<path id="path10_fill" d="M 156.6 15.2508C 156.6 20.7833 161.083 23.8043 167.366 23.8043C 172.767 23.8043 177.029 21.3656 177.029 16.4883C 177.029 12.7393 174.825 10.2278 169.975 9.39069L 165.602 8.62633C 164.169 8.37155 163.287 7.97117 163.287 6.91563C 163.287 5.6417 164.463 4.84094 166.521 4.84094C 168.909 4.84094 170.636 5.93288 170.82 8.29875L 176.552 8.18956C 176.441 3.09383 172.987 0 166.594 0C 160.826 0 157.151 2.80265 157.151 7.4616C 157.151 11.4654 159.797 13.5765 163.581 14.268L 167.807 14.996C 169.57 15.3236 170.93 15.542 170.93 16.8887C 170.93 18.1626 169.534 18.927 167.366 18.927C 164.794 18.927 162.552 17.9442 162.332 15.0688L 156.6 15.2508Z"/>
+</defs>
+</svg>

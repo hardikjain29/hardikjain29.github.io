@@ -1,0 +1,245 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	background: 0;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0;
+	z-index: 14;
+	bottom: 0;
+	margin: 0 auto;
+	text-align: left;
+	color: $Bay-Of-Many;
+	
+	h2 {
+		text-align: left;
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__left {
+	    display: flex;
+	    flex-direction: row;
+	    font-size: 0.85rem;
+		color: $Bay-Of-Many;
+	    flex: 1;
+	    width: 80%;
+		@include respond-to('medium') {
+			margin-left: 14rem;
+			padding-bottom: 6rem;
+		}
+  	}
+  	&__right {
+		margin-bottom: 6rem;
+
+		&__contact {
+			margin-top: 3rem;
+		}
+		&__address {
+			margin-top: 3rem;
+			line-height: 1.7;
+		}
+		&__social {
+			margin-top: 3rem;
+		}
+		@include respond-to('medium') {
+			display: flex;
+		}
+  		a {
+			color: $Bay-Of-Many;	  
+  			opacity: 0.95;
+			font-size: 14px;
+  			img {
+  				height: 1.2em;
+  				width: auto;
+  				margin: 0 auto;
+  				margin-right: 2rem;
+  				margin-bottom: 1rem;
+  			}
+  			&:hover {
+  				opacity: 1;
+  				transform: scale(1.1);
+  			}
+  		}
+		&__links {
+			margin-bottom: 3rem;
+			font-size: 0.85em;
+			font-weight: 700;
+			&--mail {
+				color: $International-Orange !important;
+			}
+		}
+  	}
+  	&-top {
+  		display: flex;
+  		flex-direction: column;
+  		justify-content: flex-start;
+  		align-items: flex-start;
+  		margin-bottom: 6rem;
+		padding-bottom: 4rem;
+		border-bottom: 1px solid $Heather;
+		
+		@include respond-to('medium') {
+			margin-bottom: 2rem;
+		}
+				  
+  	}
+  	&-bottom {
+  		display: flex;
+  		flex-direction: column;
+   		justify-content: flex-start;
+  		align-items: flex-start;
+  		padding-bottom: 2rem;
+  	}
+  	&__left {
+  		justify-content: flex-start;
+  	}
+  	&-container {
+  		width: 90%;
+		margin-top: rem(64px);
+  	}
+  	&-menu {
+  		display: flex;
+  		flex-direction: column;
+  		margin-top: 2rem;
+  		&__title {
+  			margin-bottom: 1rem;
+			font-size: 0.85em;
+			font-weight: 700;
+  		}
+		a {
+			color: $Bay-Of-Many;
+			width: 25%;
+		}
+  	}
+  	&-cta {
+  		display: flex;
+  		flex-direction: row;
+  		justify-content: center;
+  		align-items: center;
+  	}
+  	ul {
+  		margin: 1rem 0;
+  		li {
+  			margin-right: 1rem;
+  			a {
+  				font-weight: 400;
+  				letter-spacing: -0.05em;
+  			}
+  		}
+  	}
+  	&-links {
+  		display: flex;
+  		flex-direction: row;
+  		justify-content: flex-start;
+  		flex-wrap: wrap;
+  	}
+  	&-link {
+  		width: 10rem;
+  		margin-right: 2rem;
+  		text-align: left;
+  	}
+  	&-primary {
+  		flex: 2 !important;
+  	}
+  	&-secondary {
+  		flex: 1;
+  	}
+  	&-text {
+		margin-top: 30px;
+		font-size: 18px;
+  		text-align: left;
+  		color: $Bay-Of-Many;
+		line-height: 1.8rem;
+  	}
+  @include respond-to('medium') {
+  	flex-direction: column;
+  	justify-content: center;
+  	margin:0 auto;
+	&__wrapper {
+		flex-direction: row;
+	}
+	&__left {
+		margin-bottom: 6rem;
+		justify-content: flex-start;
+	}
+	&-top {
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	&-bottom {
+  		flex-direction: row;
+   		justify-content: center;
+  		align-items: center;
+	}
+	&-menu {
+		margin-top: 2rem;
+		margin-left: 4rem;
+	}
+	&-link {
+		width: 10rem;
+	}
+  }
+
+  &__logo {
+	display: none;
+	@include respond-to('medium') {
+		display: initial;
+	    left: 0;
+	    bottom: -32px;
+	    width: 20%;
+	    position:  fixed;
+	}
+  }
+}
+
+.cta-footer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: 0;
+	padding: 3rem 0;
+	padding-bottom: 0;
+	margin-bottom: 4rem;
+	&__wrapper {
+		width: 80%;
+		border-bottom: none;
+		h2,h6 {
+			color: $Bay-Of-Many;
+		}
+		h2 {
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: 500;
+			line-height: rem(42px);
+			font-size: rem(24px);
+			letter-spacing: -0.01em;
+		}
+
+	}
+	@include respond-to('medium') {
+		flex-direction: row;
+		justify-content: center;
+		background: linear-gradient(99.09deg, #03D9C9 0%, #0A4fFF 106.36%);
+		margin-bottom: 4rem;
+		&__wrapper {
+			padding-bottom: 4rem;
+			border-bottom: 1px solid $Bay-Of-Many;
+			h2 {
+				font-family: Roboto;
+				font-style: normal;
+				font-weight: 500;
+				font-size: rem(30px);
+				letter-spacing: -0.01em;
+			}
+		}
+	}
+}

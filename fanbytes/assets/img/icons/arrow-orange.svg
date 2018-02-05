@@ -1,0 +1,16 @@
+<svg width="15" height="15" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>arrow-orange</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-14375 -41186)">
+<g id="arrow-orange">
+<use xlink:href="#path0_fill" transform="translate(14375 41186)" fill="#FF5A04"/>
+<use xlink:href="#path1_fill" transform="translate(14375 41186)" fill="#FF5A04"/>
+<use xlink:href="#path2_fill" transform="translate(14375 41186)" fill="#FF5A04"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 13.6126L 12.7771 0.835393L 14.1645 2.22279L 1.38739 15L 0 13.6126Z"/>
+<path id="path1_fill" d="M 13.0379 0L 15 0L 15 14.7156L 13.0379 14.7156L 13.0379 0Z"/>
+<path id="path2_fill" d="M 0.284537 0L 15 0L 15 1.96207L 0.284537 1.96207L 0.284537 0Z"/>
+</defs>
+</svg>

@@ -1,0 +1,513 @@
+// font imports
+  @font-face{
+        font-family:"Larsseit W01_n2";
+        src:url("../assets/fonts/5ab6cba9-bca7-40b7-8dd7-c56e46e0ad19.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Larsseit W01";
+        src:url("../assets/fonts/5ab6cba9-bca7-40b7-8dd7-c56e46e0ad19.eot?#iefix");
+        src:url("../assets/fonts/5ab6cba9-bca7-40b7-8dd7-c56e46e0ad19.eot?#iefix") format("eot"),url("../assets/fonts/b54aa241-5288-47f9-a593-9cf0b7f5e4f6.woff2") format("woff2"),url("../assets/fonts/68a979fc-34d5-4f1c-bda6-bf5c4374208c.woff") format("woff"),url("../assets/fonts/e017088c-0f3f-4ae2-ab5c-083628688743.ttf") format("truetype"),url("../assets/fonts/0b3253d0-c6a7-4da2-a943-ab64c9876c9c.svg#0b3253d0-c6a7-4da2-a943-ab64c9876c9c") format("svg");
+        font-weight: 200;
+        font-style: normal;
+    }
+    @font-face{
+        font-family:"Larsseit W01_n2";
+        src:url("../assets/fonts/ef431dac-7ccf-48f9-ab0d-76b9c4bdb21a.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Larsseit W01";
+        src:url("../assets/fonts/ef431dac-7ccf-48f9-ab0d-76b9c4bdb21a.eot?#iefix");
+        src:url("../assets/fonts/ef431dac-7ccf-48f9-ab0d-76b9c4bdb21a.eot?#iefix") format("eot"),url("../assets/fonts/63e41261-c59d-42db-86b7-99a32ec9a605.woff2") format("woff2"),url("../assets/fonts/c0cd4f71-5a0a-4aa1-83a6-1ba625a9bc8f.woff") format("woff"),url("../assets/fonts/e4efd1fb-0533-4b0c-adad-7727c9ce68e0.ttf") format("truetype"),url("../assets/fonts/15304154-ab84-45eb-b5d5-239a94fa882f.svg#15304154-ab84-45eb-b5d5-239a94fa882f") format("svg");
+        font-weight: 200;
+        font-style: normal;
+    }
+    @font-face{
+        font-family:"Larsseit W01_n4";
+        src:url("../assets/fonts/43eef420-7d5f-467b-aaa4-4378263e4b2f.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Larsseit W01";
+        src:url("../assets/fonts/43eef420-7d5f-467b-aaa4-4378263e4b2f.eot?#iefix");
+        src:url("../assets/fonts/43eef420-7d5f-467b-aaa4-4378263e4b2f.eot?#iefix") format("eot"),url("../assets/fonts/80a66009-a870-4c7f-ae60-07d9973fae73.woff2") format("woff2"),url("../assets/fonts/5bef20e3-acd2-4071-9927-ef1b73940ffd.woff") format("woff"),url("../assets/fonts/9f5df1b6-90d7-4185-b5a3-ba901af8a72a.ttf") format("truetype"),url("../assets/fonts/f9f7793b-057d-4c15-a973-b57ac67b6ad3.svg#f9f7793b-057d-4c15-a973-b57ac67b6ad3") format("svg");
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face{
+        font-family:"Larsseit W01_i4";
+        src:url("../assets/fonts/7e224e5f-5ec8-493b-922c-75f8c2b0b0ec.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Larsseit W01";
+        src:url("../assets/fonts/7e224e5f-5ec8-493b-922c-75f8c2b0b0ec.eot?#iefix");
+        src:url("../assets/fonts/7e224e5f-5ec8-493b-922c-75f8c2b0b0ec.eot?#iefix") format("eot"),url("../assets/fonts/61599f33-8ccf-482d-9117-bfb22b7c0ffc.woff2") format("woff2"),url("../assets/fonts/108e892a-b208-4d69-ac18-799398459d5f.woff") format("woff"),url("../assets/fonts/be32d236-ab8a-48b1-b02d-d01e0c7d70b3.ttf") format("truetype"),url("../assets/fonts/bb786cf6-629b-4111-8433-e347368c0b21.svg#bb786cf6-629b-4111-8433-e347368c0b21") format("svg");
+        font-weight: 400;
+        font-style: italic;
+    }
+    @font-face{
+        font-family:"Larsseit W01_n5";
+        src:url("../assets/fonts/7c18e6f0-ae7b-4e5d-87e6-b5b3b0ec2d73.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Larsseit W01";
+        src:url("../assets/fonts/7c18e6f0-ae7b-4e5d-87e6-b5b3b0ec2d73.eot?#iefix");
+        src:url("../assets/fonts/7c18e6f0-ae7b-4e5d-87e6-b5b3b0ec2d73.eot?#iefix") format("eot"),url("../assets/fonts/35585918-70df-42bb-af94-a863449eb643.woff2") format("woff2"),url("../assets/fonts/7e733478-69ef-4b99-801d-73bf3528ce30.woff") format("woff"),url("../assets/fonts/da7f18e4-cdc2-44bf-acb6-a89a2f1b51c9.ttf") format("truetype"),url("../assets/fonts/1a3e172f-7624-43a0-a942-fd569d66d767.svg#1a3e172f-7624-43a0-a942-fd569d66d767") format("svg");
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face{
+        font-family:"Larsseit W01_n7";
+        src:url("../assets/fonts/a19695b2-589f-4b08-94f5-2505a4c8631d.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Larsseit W01";
+        src:url("../assets/fonts/a19695b2-589f-4b08-94f5-2505a4c8631d.eot?#iefix");
+        src:url("../assets/fonts/a19695b2-589f-4b08-94f5-2505a4c8631d.eot?#iefix") format("eot"),url("../assets/fonts/32270e9c-145a-492e-9d13-f0971893dd96.woff2") format("woff2"),url("../assets/fonts/7d211f36-d7b9-4625-a3e9-4bec9e5f4737.woff") format("woff"),url("../assets/fonts/de717994-6d9f-487a-b686-1322aa474cd0.ttf") format("truetype"),url("../assets/fonts/5d9c16c5-fe21-4990-a597-a79b932422e5.svg#5d9c16c5-fe21-4990-a597-a79b932422e5") format("svg");
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face{
+        font-family:"Larsseit W01_i7";
+        src:url("../assets/fonts/900d5cff-ba75-41ce-8aec-571b885b809c.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Larsseit W01";
+        src:url("../assets/fonts/900d5cff-ba75-41ce-8aec-571b885b809c.eot?#iefix");
+        src:url("../assets/fonts/900d5cff-ba75-41ce-8aec-571b885b809c.eot?#iefix") format("eot"),url("../assets/fonts/e508ae23-a390-4109-942c-1d44a578cae5.woff2") format("woff2"),url("../assets/fonts/fd046cac-8eb5-4a11-9873-f6b38bde3fc4.woff") format("woff"),url("../assets/fonts/c39d196f-e632-4f14-91bd-54e706cda5f5.ttf") format("truetype"),url("../assets/fonts/4b13fdb1-6ca8-49ac-a52b-acc51747133a.svg#4b13fdb1-6ca8-49ac-a52b-acc51747133a") format("svg");
+        font-weight: 700;
+        font-style: italic;
+    }
+
+// @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+
+
+/*------------------------------------*\
+    # Simple Typography Settings
+\*------------------------------------*/
+
+// Font Family
+$font-family: 'Larsseit W01','Larsseit',-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+// Base Font for HTML
+$base-font-size: 16px;
+$base-font-size: 16px;
+
+// Paragraph Styles
+$paragraph-color      : $Lightest-Grey;
+$paragraph-size       : rem(16px);
+$paragraph-line-height: 1.5em;
+$paragraph-margin     : 20px;
+
+// Header Styles
+$header-color      : $Violet;
+$header-size       : rem(48px);
+$header-line-height: 1.333em;
+$header-margin     : $paragraph-margin * 1.2;
+
+// Blockquote Styles
+$blockquote-color      : $International-Orange;
+$blockquote-size       : rem(28px);
+$blockquote-line-height: 1.5em;
+$blockquote-margin     : $paragraph-margin * 1.5;
+
+// Links
+$link-color: #4eaff6;
+
+// hr
+$hr-margin: 30px;
+
+// Type Misc
+$font-weight-bold: 800;
+$border-color: #DADADA;
+
+
+
+body {
+    font-size: 14px;
+
+    @include respond-to('medium'){
+        font-size: 16px;
+    }
+    @include respond-to('huge'){
+        font-size: 20px;
+    }
+}
+
+
+
+/*------------------------------------*\
+    # Type
+\*------------------------------------*/
+
+// Make type normal across browsers
+*, html, body {
+    font-size: $base-font-size;
+    font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    outline: none;
+}
+
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 $header-margin 0;
+    color: $Violet;
+    font-family: $font-family;
+    line-height: $header-line-height;
+    font-weight: 400;
+    text-align: left;
+    font-family: $font-family;
+    font-style: normal;
+}
+
+h1 {
+    font-size: $header-size/1.5;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+
+    @include respond-to('medium'){
+        font-size: 64px;
+    }
+    @include respond-to('large') {
+        font-size: 48px;
+    }
+    @include respond-to('huge') {
+        font-size: 42px;
+    }
+
+    span {
+        color: $Golden-Fizz;
+    }
+
+}
+
+h2 {
+    font-size: $header-size / 1.3;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 24px;
+
+    @include respond-to('medium'){
+        font-size: 26px;
+    }
+    @include respond-to('large') {
+        font-size: 28px;
+    }
+    @include respond-to('huge') {
+        font-size: 30px;
+    }
+}
+
+h3 {
+    font-size: $header-size / 1.5;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+
+    @include respond-to('medium'){
+        font-size: 30px;
+    }
+}
+
+h4 {
+    font-size: $header-size / 1.7;
+    font-weight: light;
+    line-height: normal;
+    font-size: 20px;
+
+    @include respond-to('medium'){
+        font-size: 24px;
+    }
+}
+
+h5 {
+    font-size: $header-size / 1.8;
+    font-weight: bold;
+    line-height: normal;
+    font-family: Larsseit;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+    text-align: center;
+
+    color: $Light-Slate-Grey;
+    @include respond-to('medium'){
+        font-size: 16px;
+    }
+}
+
+h6 {
+    font-size: $header-size / 2;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    @include respond-to('medium'){
+        font-size: 16px;
+    }
+}
+
+
+
+// Paragraphs
+p {
+    margin-top: $paragraph-margin;
+    font-size: $paragraph-size;
+    line-height: $paragraph-line-height;
+    color: $paragraph-color;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 26px;
+    font-size: 14px;
+    color: #344266;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    @include respond-to('medium'){
+        line-height: 30px;
+        font-size: 16px;
+        letter-spacing: -0.004em;
+    }
+    @include respond-to('large') {
+        font-size: 48px;
+    }
+    @include respond-to('huge') {
+        font-size: 64px;
+    }
+
+}
+
+
+
+// Links
+a {
+    color: $link-color;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 21px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+
+    @include respond-to('medium'){
+        line-height: 26px;
+        font-size: 16px;
+    }
+    @include respond-to('large') {
+        font-size: 16px;
+    }
+    @include respond-to('huge') {
+        font-size: 16px;
+    }
+    &:hover {
+        color: $International-Orange !important;
+        cursor: pointer !important;
+    }
+
+    i {
+        background-image: url(fallback.png);
+        background-image: url('../assets/img/icons/arrow-icon.svg'), none;
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 0.35rem;
+        margin-left: 1rem;
+    }
+    @include transition(all .2s ease);
+}
+
+.primary-link {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $link-color;
+    &--orange {
+        border-bottom: 2px solid $International-Orange;
+    }
+}
+
+.primary-link--arrow {
+        color: $International-Orange !important;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: bold;
+        line-height: rem(24px);
+        font-size: rem(16px);
+        letter-spacing: -0.0085em;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        i {
+            background-image: url(fallback.png);
+            background-image: url('../assets/img/icons/arrow-orange.svg'), none;
+            background-repeat: no-repeat;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-top: 0.35rem;
+            margin-left: 1rem;
+            z-index: 2;
+        }
+    @include transition(all .2s ease);
+}
+
+// Lists
+ul, ol {
+    margin: $paragraph-margin 0 0 20px;
+
+    li {
+        margin-top: 10px;
+        line-height: $paragraph-line-height;
+        color: $paragraph-color;
+    }
+
+    ul, ol {
+        margin-top: 0;
+    }
+}
+
+ul {
+
+    li {
+        list-style: none;
+        line-height: 33px;
+        font-size: 16px;
+        letter-spacing: -0.005em;
+    }
+
+    ul {
+
+        li {
+            list-style: none;
+        }
+    }
+}
+
+ol {
+
+    li {
+        list-style: none;
+        line-height: 33px;
+        font-size: 16px;
+        letter-spacing: -0.005em;
+    }
+}
+
+
+// hr
+hr {
+    height: 1px;
+    margin: $hr-margin 0;
+    border: none;
+    background-color: $border-color;
+}
+
+
+// Blockquote
+blockquote {
+    margin: $blockquote-margin 0;
+    color: $blockquote-color;
+    text-align: center;
+    font-style: normal !important;
+    font-weight: 500;
+    line-height: rem(31px);
+    font-size: rem(18px);
+    letter-spacing: -0.02em;
+}
+
+
+// Tables
+table {
+    width: 100%;
+    margin: $blockquote-margin 0;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid $border-color;
+    text-align: left;
+}
+
+th {
+    font-weight: $font-weight-bold;
+}
+
+th, td {
+    padding: 15px;
+}
+
+
+// Figure
+figure {
+    margin: $blockquote-margin 0;
+
+    img {
+        margin: 0;
+    }
+}
+
+figcaption {
+    margin-top: 10px;
+    color: lighten($paragraph-color, 10%);
+    font-size: $paragraph-margin * 0.8;
+}
+
+
+// Code
+pre {
+    display: block;
+    margin: 0 0 40px 0;
+    padding: 20px;
+    background-color: lighten($border-color, 12%);
+    border: 1px solid $border-color;
+    overflow: auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    code {
+        position: static;
+        padding: 0;
+        border: none;
+        line-height: 1.5em;
+    }
+}
+
+code {
+    position: relative;
+    top: -0.2em;
+    padding: 3px;
+    font-family: Courier New, Courier, monospace;
+    font-size: $paragraph-size / 1.4;
+    color: darken($border-color, 40%);
+    line-height: 1em;
+    pointer-events: none;
+    border: 1px solid $border-color;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+
+// Misc Styles
+em, i, .italic {
+    font-style: italic;
+}
+
+strong, b, .bold {
+    font-weight: $font-weight-bold;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: $blockquote-margin 0;
+}
+
