@@ -38,7 +38,7 @@ html,body {
 			align-items: flex-start;
 		}
 		&__description {
-			padding: rem(250px) 0;
+			padding: rem(100px) 0;
 			display: flex;
 		}
 		&__brief {
@@ -98,6 +98,9 @@ html,body {
 	@include respond-to('medium') {
 		&-card {
 			flex-direction: row;
+			&__description {
+				padding: rem(250px) 0;
+			}
 		}
 	}
 }
@@ -354,13 +357,23 @@ html,body {
 	}
 	&__content {
 		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
-		text-align: left;
+		justify-content: center;
+		align-items: center;
+		
+		@include respond-to('medium') {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			text-align: left;
+		}
 	}
 	&__image {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
+		
+		@include respond-to('medium') {
+			justify-content: flex-end;
+		}
 		
 	}
 	&__title {
@@ -725,9 +738,7 @@ section {
 	padding: rem(64px) 0;
 }
 .mobile-col {
-	right: 0;
-	display: flex;
-	justify-content: center;
+	margin: 0 50px;
 	&__vid {
 		background-image: url('../assets/img/iphone.png');
 		background-repeat: no-repeat;
@@ -743,7 +754,8 @@ section {
 			left: 20px;
 		}
 	}
-	@include respond-to('medium') {	
+	@include respond-to('medium') {
+		display: flex;
 		justify-content: flex-end;
 	}
 }
