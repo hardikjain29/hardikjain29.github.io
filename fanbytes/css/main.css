@@ -1524,13 +1524,15 @@ body.opened-drawer {
         margin-left: 4rem; }
       .footer-link {
         width: 10rem; } }
-  .footer__logo {
+  .footer::after {
     display: none; }
     @media (min-width: 800px) {
-      .footer__logo {
+      .footer::after {
         display: initial;
+        content: url("../assets/img/monogram.svg");
+        display: block;
         left: 0;
-        bottom: -32px;
+        bottom: -4px;
         width: 20%;
         position: fixed; } }
 
