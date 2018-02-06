@@ -725,34 +725,26 @@ section {
 	padding: rem(64px) 0;
 }
 .mobile-col {
-	position: relative;
-    right: 0;
+	right: 0;
 	display: flex;
 	justify-content: center;
-	
 	&__vid {
-		position: absolute;
-		
-		top: 16%;
-		width: 55%;
-		
+		background-image: url('../assets/img/iphone.png');
+		background-repeat: no-repeat;
+		width: 400px;
+    	height: 470px;
+		position: relative;
+
 		video {
-			width: 100%;
+			position: absolute;
+			text-align: center;		
+			width: 195px;
+			top: 45px;
+			left: 20px;
 		}
 	}
-	@include respond-to('medium') {
+	@include respond-to('medium') {	
 		justify-content: flex-end;
-		margin-right: 4rem;
-		&__vid {
-			position: absolute;
-			right: 4.5%;
-			top: 15%;
-			width: 29%;
-			
-			video {
-				width: 100%;
-			}
-		}
 	}
 }
 

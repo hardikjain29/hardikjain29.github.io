@@ -1531,11 +1531,12 @@ body.opened-drawer {
         content: "";
         background-image: url(../assets/img/monogram.svg);
         background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left bottom;
         display: inline-block;
         left: 0;
-        bottom: -4px;
-        width: 289px;
-        height: 200px;
+        width: 270px;
+        height: 100%;
         position: fixed; } }
 
 .cta-footer {
@@ -2237,27 +2238,24 @@ section {
   padding: 4rem 0; }
 
 .mobile-col {
-  position: relative;
   right: 0;
   display: flex;
   justify-content: center; }
   .mobile-col__vid {
-    position: absolute;
-    top: 16%;
-    width: 55%; }
+    background-image: url("../assets/img/iphone.png");
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 470px;
+    position: relative; }
     .mobile-col__vid video {
-      width: 100%; }
+      position: absolute;
+      text-align: center;
+      width: 195px;
+      top: 45px;
+      left: 20px; }
   @media (min-width: 800px) {
     .mobile-col {
-      justify-content: flex-end;
-      margin-right: 4rem; }
-      .mobile-col__vid {
-        position: absolute;
-        right: 4.5%;
-        top: 15%;
-        width: 29%; }
-        .mobile-col__vid video {
-          width: 100%; } }
+      justify-content: flex-end; } }
 
 .contact {
   background: #1F06A9;
