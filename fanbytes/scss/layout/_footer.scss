@@ -190,13 +190,15 @@
   &::after {
 	  	display: none;
 		@include respond-to('medium') {
-			display: initial;
-			content: url('../assets/img/monogram.svg');
-			display: block;
+			content: "";
+			background-image: url(../assets/img/monogram.svg);
+			background-repeat: no-repeat;
+			display: inline-block;
 			left: 0;
 			bottom: -4px;
-			width: 20%;
-			position:  fixed;
+			width: 289px;
+			height: 200px;
+			position: fixed;
 		}
 	}
 }
