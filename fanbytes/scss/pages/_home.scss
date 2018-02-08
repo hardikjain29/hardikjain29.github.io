@@ -71,6 +71,7 @@ html,body {
 			display: flex;
 			flex: 1;
 
+			padding-bottom: 1rem;
 			&--create {
 				color: $Electric-Violet;
 				border-color: $Electric-Violet;
@@ -123,9 +124,12 @@ html,body {
 	&::after {
 		display: none;
 	}
+	&__right {
+		max-width: 80%;
+	}
 	&__left {
 		padding-bottom: 4rem;
-		max-width: 100%;
+		max-width: 80%;
 		h1,
 		h4 {
 			text-align: left;
@@ -148,7 +152,8 @@ html,body {
 		display: flex;
 		flex-direction: column-reverse;
 		justify-content: space-between;
-		width: 95%;
+		width: 90%;
+		margin: 0 auto;
 	}
 	&-cta {
 		display: flex;
@@ -175,7 +180,12 @@ html,body {
 		padding-top: 6rem;
 		justify-content: center;
 		&::after {
-			content: url('../assets/img/fanbytes-f-overlay.png');
+			content: '';
+			background: url('../assets/img/fanbytes-f-overlay.png');
+			background-size: contain;
+			overflow: hidden;
+	  		background-repeat: no-repeat;
+	  		background-position: right;
 			display: block;
 			height: 100%;
 			width: 100%;
@@ -183,10 +193,6 @@ html,body {
 			position: fixed;
 			z-index: -1;
 			top:0;
-			right: -700px;
-			overflow: hidden;
-	  		background-repeat: no-repeat;
-	  		background-position: right;
 		}
 		&__left {
 			padding-top: 4rem;
@@ -200,7 +206,14 @@ html,body {
 		&-wrapper {
 			flex-direction: row;
 			align-items : center;
-			width: 87%;
+			width: 100%;
+		}
+	}
+	@include respond-to('xhuge') {
+		&__left {
+			h1 {
+				font-size: 2.8rem;
+			}
 		}
 	}
 }
@@ -492,14 +505,22 @@ html,body {
 .news {
 	background: #FAFAFA;
 	text-align: center;
+	display: flex;
+	flex-wrap:wrap;
+	display: flex;
+	&__cards {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 	&__card {
 		display: flex;
 		flex-direction: column;
 		padding: 0rem 1rem;
 		background: white;
 		box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.025);
-		margin: 2rem auto;
-
+		margin: 1rem 0rem;
+		flex-grow: 1;
 		img {
 			margin: 0;
 			height: auto;
@@ -532,8 +553,8 @@ html,body {
 		flex-direction: column;
 		padding: 0rem;
 		box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.025);
-		margin: 2rem auto;
-		max-width: 85%;
+		margin: 1rem 0.5rem;
+		max-width: 100%;
 		background: white;
 		img {
 			margin: 0;
@@ -736,30 +757,48 @@ html,body {
 }
 section {
 	padding: rem(64px) 0;
+	overflow-y:hidden;
 }
 .mobile-col {
-	margin: 0 50px;
+	justify-content: center;
 	&__vid {
-		background-image: url('../assets/img/iphone.png');
-		background-repeat: no-repeat;
-		width: 400px;
-    	height: 470px;
-		position: relative;
-
+	    background-image: url(../assets/img/iphone.png);
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    height: 480px;
+	    position: relative;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: row;
 		video {
-			position: absolute;
 			text-align: center;		
-			width: 195px;
-			top: 45px;
-			left: 20px;
+			top: rem(-20px);
+			margin-top: rem(-50px);
 		}
 	}
 	@include respond-to('medium') {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: flex-end !important;
+		&__vid {
+			background-position: right !important;
+		    justify-content: flex-end;
+	    	align-items: center;
+			width: 100%;
+			video {
+				margin-top: rem(-50px);
+				margin-right: rem(25px);
+			}
+		}
 	}
 }
 
+.mobile-col__vid video {
+    
+    text-align: center;
+    width: 185px;
+    /* left: 20px; */
+}
 .contact {
 	background: $Ultramarine;
 	height: 100%;
@@ -814,3 +853,4 @@ section {
 		opacity: 0.5;
 	}
 }
+

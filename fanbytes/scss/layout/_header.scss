@@ -139,7 +139,7 @@
 			justify-content: space-around;
 			align-items: center;
 			width: 100%;
-			padding: 2rem;
+			padding: 1rem 2rem;
 		}
 		&__menu {
 			display: none;
@@ -185,7 +185,8 @@
 
 #nav-icon1 {
   width: 30px;
-  height: 20px;
+  height: 30px;
+  margin-top: 5px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -215,6 +216,14 @@
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
+}
+#nav-mob {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 #nav-icon1 span:nth-child(1) {

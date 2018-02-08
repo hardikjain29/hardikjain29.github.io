@@ -315,7 +315,8 @@ a {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #4eaff6; }
   .primary-link--orange {
-    border-bottom: 2px solid #FF4E00; }
+    border-bottom: 2px solid #FF4E00;
+    margin-top: 2rem !important; }
 
 .primary-link--arrow {
   color: #FF4E00 !important;
@@ -1257,7 +1258,7 @@ img {
       justify-content: space-around;
       align-items: center;
       width: 100%;
-      padding: 2rem; }
+      padding: 1rem 2rem; }
     .header--mobile__menu {
       display: none;
       width: 100%;
@@ -1291,7 +1292,8 @@ img {
 /* Icon 1 */
 #nav-icon1 {
   width: 30px;
-  height: 20px;
+  height: 30px;
+  margin-top: 5px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -1320,6 +1322,14 @@ img {
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out; }
+
+#nav-mob {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
 
 #nav-icon1 span:nth-child(1) {
   top: 0px; }
@@ -1577,6 +1587,11 @@ body.opened-drawer {
           font-size: 1.875rem;
           letter-spacing: -0.01em; } }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
 .button {
   width: 200px;
   height: 60px;
@@ -1705,7 +1720,8 @@ html, body {
         color: #4FDA76; }
     .works-card__link {
       display: flex;
-      flex: 1; }
+      flex: 1;
+      padding-bottom: 1rem; }
       .works-card__link--create {
         color: #A30DFF;
         border-color: #A30DFF; }
@@ -1744,9 +1760,11 @@ html, body {
   overflow: hidden; }
   .hero::after {
     display: none; }
+  .hero__right {
+    max-width: 80%; }
   .hero__left {
     padding-bottom: 4rem;
-    max-width: 100%; }
+    max-width: 80%; }
     .hero__left h1,
     .hero__left h4 {
       text-align: left;
@@ -1763,7 +1781,8 @@ html, body {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    width: 95%; }
+    width: 90%;
+    margin: 0 auto; }
   .hero-cta {
     display: flex; }
     .hero-cta__start {
@@ -1784,18 +1803,19 @@ html, body {
       padding-top: 6rem;
       justify-content: center; }
       .hero::after {
-        content: url("../assets/img/fanbytes-f-overlay.png");
+        content: '';
+        background: url("../assets/img/fanbytes-f-overlay.png");
+        background-size: contain;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: right;
         display: block;
         height: 100%;
         width: 100%;
         opacity: 1;
         position: fixed;
         z-index: -1;
-        top: 0;
-        right: -700px;
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-position: right; }
+        top: 0; }
       .hero__left {
         padding-top: 4rem;
         padding-bottom: 0rem;
@@ -1806,7 +1826,10 @@ html, body {
       .hero-wrapper {
         flex-direction: row;
         align-items: center;
-        width: 87%; } }
+        width: 100%; } }
+  @media (min-width: 1550px) {
+    .hero__left h1 {
+      font-size: 2.8rem; } }
 
 .about {
   display: flex;
@@ -2041,14 +2064,22 @@ html, body {
 
 .news {
   background: #FAFAFA;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  display: flex; }
+  .news__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
   .news__card {
     display: flex;
     flex-direction: column;
     padding: 0rem 1rem;
     background: white;
     box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.025);
-    margin: 2rem auto; }
+    margin: 1rem 0rem;
+    flex-grow: 1; }
     .news__card img {
       margin: 0;
       height: auto;
@@ -2076,8 +2107,8 @@ html, body {
     flex-direction: column;
     padding: 0rem;
     box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.025);
-    margin: 2rem auto;
-    max-width: 85%;
+    margin: 1rem 0.5rem;
+    max-width: 100%;
     background: white; }
     .case-studies__card img {
       margin: 0;
@@ -2245,26 +2276,42 @@ html, body {
       align-items: initial; } }
 
 section {
-  padding: 4rem 0; }
+  padding: 4rem 0;
+  overflow-y: hidden; }
 
 .mobile-col {
-  margin: 0 50px; }
+  justify-content: center; }
   .mobile-col__vid {
-    background-image: url("../assets/img/iphone.png");
+    background-image: url(../assets/img/iphone.png);
     background-repeat: no-repeat;
-    width: 400px;
-    height: 470px;
-    position: relative; }
+    background-position: center;
+    height: 480px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; }
     .mobile-col__vid video {
-      position: absolute;
       text-align: center;
-      width: 195px;
-      top: 45px;
-      left: 20px; }
+      top: -1.25rem;
+      margin-top: -3.125rem; }
   @media (min-width: 800px) {
     .mobile-col {
       display: flex;
-      justify-content: flex-end; } }
+      justify-content: flex-end !important; }
+      .mobile-col__vid {
+        background-position: right !important;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%; }
+        .mobile-col__vid video {
+          margin-top: -3.125rem;
+          margin-right: 1.5625rem; } }
+
+.mobile-col__vid video {
+  text-align: center;
+  width: 185px;
+  /* left: 20px; */ }
 
 .contact {
   background: #1F06A9;

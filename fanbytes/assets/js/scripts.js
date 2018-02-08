@@ -27,8 +27,8 @@ $(document).ready(function () {
 	const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
 	$(document).ready(function(){
-		$('#nav-icon1').click(function(){
-		  $(this).toggleClass('open');
+		$('#nav-mob').click(function(){
+		  $('#nav-icon1').toggleClass('open');
 		  $('.header--mobile__menu').toggleClass('open');
 		  
 		  $("header").css("background","linear-gradient(224.59deg, #FF004D 0%, #FF4E00 100%)");
