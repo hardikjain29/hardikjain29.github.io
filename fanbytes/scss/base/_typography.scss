@@ -333,6 +333,10 @@ a {
         border-bottom: 2px solid $International-Orange;
         margin-top: 2rem !important;
     }
+    &--white {
+        border-bottom: 2px solid white;
+        color: white !important;
+    }
 }
 
 .primary-link--arrow {
@@ -355,6 +359,27 @@ a {
             margin-top: 0.35rem;
             margin-left: 1rem;
             z-index: 2;
+            @include transition(all .2s ease);
+        }
+        &--white {
+            border-bottom: 2px solid white;
+            color: white !important;
+            i {
+                background-image: url('../assets/img/icons/arrow-white.svg'), none;
+            }
+            &:hover {
+                color: $International-Orange !important;
+                border-bottom: 2px solid $International-Orange;
+                i {
+                    background-image: url('../assets/img/icons/arrow-orange.svg'), none;
+                }
+            }
+        }
+        &:hover {
+            i {
+                    transform: rotate(45deg);  
+                    @include transition(all .2s ease); 
+            }
         }
     @include transition(all .2s ease);
 }
@@ -459,7 +484,37 @@ figcaption {
     color: lighten($paragraph-color, 10%);
     font-size: $paragraph-margin * 0.8;
 }
+'
+html {font-size: 1em;}
 
+body {
+  background-color: white;
+  font-family: 'Larsseit', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}'
 
 // Code
 pre {
