@@ -1,0 +1,198 @@
+.brands-page {
+	.hero {
+		max-height: 80% !important;
+		min-height: 80% !important;
+		display: flex;
+		padding: 8rem 0;
+		background: $primary-gradient;
+		&__left {
+			h1,h2,h4,h5 {
+				color: white;
+			}
+			h1 {
+				font-style: normal;
+				font-weight: bold;
+				line-height: 55px;
+				font-size: 36px;
+				color: #FFFFFF;
+				max-width: 700px;
+			}
+			h4 {
+				line-height: 29px;
+				font-size: 18px;
+				color: #FFFFFF;
+				max-width: 400px;
+			}
+		}
+		&__media {
+			@include respond-to('medium') {
+				max-width: 4rem;
+			}
+			@include respond-to('huge') {
+				max-width: 6rem;
+			}
+			@include respond-to('xhuge') {
+				max-width: 8rem;
+			}			
+		}
+		&-platform {
+			margin-top: 4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			color: white;
+			&__images {
+				display: flex;
+				img {
+					margin-right: 2rem;
+				}
+			}
+		}
+	}
+
+	.section-heading {
+		h1,h2,h3,h4,h5,h6 {
+			color: white;
+			text-align: center;
+		}
+		h3.section-heading__title {
+			font-style: normal;
+			font-weight: bold;
+			line-height: normal;
+			font-size: 36px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+		h6.section-heading__brief {
+			color: #7D849E;
+		}
+
+	}
+	.pay-stats {
+		padding: 4rem 0;
+		min-height: 60%;
+		background: $primary-gradient;
+		position: relative;
+		&__wrapper {
+			height: 100%;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			color: white;
+			text-align: left;
+		}
+		h1 {
+			font-style: normal;
+			font-weight: bold;
+			line-height: 114px;
+			font-size: 72px;
+			text-align: left;
+			letter-spacing: 0.01em;
+			margin-bottom: 0rem;
+		}
+		h3 {
+			font-style: normal;
+			font-weight: normal;
+			line-height: 55px;
+			font-size: 36px;
+			text-align: left;
+			letter-spacing: 0.01em;
+			margin-top: 0rem;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			
+			background: url('/assets/img/influencers/pay-bg-overlay.svg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-positon: center;
+		}
+	}
+	.how-it-works {
+		background: radial-gradient(661.80px at 50% 50%, rgba(0, 109, 255, 0.15) 0%, rgba(20, 12, 66, 0.15) 100%), #140C42;
+		padding: 2rem;
+		min-height: 80%;
+		h1,h2,h3,h4,h5,h6 {
+			color: white;
+		}
+		.works {
+			margin: 4rem 0;
+			&-step {
+				border-right: 1px solid rgba(47, 128, 237, 0.1);
+				padding: 2rem;
+			}
+			h6 {
+				font-family: Larsseit;
+				font-style: normal;
+				font-weight: normal;
+				line-height: 24px;
+				font-size: 16px;
+				color: #FFFFFF;
+				text-transform: inherit;
+			}
+		}
+	}
+	.inf-case-study {
+		background: radial-gradient(661.80px at 50% 50%, rgba(0, 109, 255, 0.15) 0%, rgba(20, 12, 66, 0.15) 100%), #140C42;
+		padding: 6rem 2rem;
+		padding: rem(64px) 0;
+		h1,h2,h3,h4,h5,h6 {
+			color: white;
+		}
+		&__content,
+		&__image {
+			display: flex;
+			
+			img {
+				max-height: rem(400px);
+				margin: 0;
+				margin-right: 4rem;
+				animation: MoveUpDown 4.5s ease forwards;
+			}
+		}
+		&__content {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			
+			@include respond-to('medium') {
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				text-align: left;
+			}
+		}
+		&__image {
+			display: flex;
+			justify-content: center;
+			
+			@include respond-to('medium') {
+				justify-content: flex-end;
+			}
+			
+		}
+		&__title {
+			font-style: normal;
+			font-weight: bold;
+			line-height: rem(43px);
+			font-size: rem(30px);
+			color: white;
+			margin-bottom: 1.5rem;
+		}
+		&__brief, {
+			font-style: normal;
+			font-weight: normal;
+			line-height: normal;
+			font-size: rem(16px);
+			color: white;
+			margin-bottom: 0.25rem;
+		}
+	}
+}

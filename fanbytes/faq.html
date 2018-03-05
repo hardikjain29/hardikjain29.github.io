@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+  <!-- Metatags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fanbytes</title>
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- load and instantiate ScrollReveal first -->
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    var MTIProjectId = 'c7b6dafa-7335-4101-9297-c3d0a43e33fa';
+    (function () {
+      var mtiTracking = document.createElement('script');
+      mtiTracking.type = 'text/javascript';
+      mtiTracking.async = 'true';
+      mtiTracking.src = 'mtiFontTrackingCode.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mtiTracking);
+    })();
+  </script>
+  <script>
+      window.sr = ScrollReveal();
+      // Add class to <html> if ScrollReveal is supported 
+      // Note: this method is deprecated, and only works in version 3 
+      if (sr.isSupported()) {
+        document.documentElement.classList.add('sr');
+      }
+      function openMenu() {
+        document.getElementsByClassName('header__menu')[0].style.display = 'block';
+        document.body.style.overflow = "hidden";
+      }
+      function closeMenu() {
+        document.getElementsByClassName('header__menu')[0].style.display = 'none';
+        document.body.style.overflow = "scroll";
+      }
+  </script>
+
+  <style>
+    /* Ensure elements load hidden before ScrollReveal runs */
+
+    .sr .fooReveal {
+      visibility: hidden;
+    }
+  </style>
+
+</head>
+
+<body class="faq-page">
+  <header class="header header--desktop">
+    <div class="container">
+      <div class="header__wrapper row start-xs middle-md  padding-1">
+        <div class="header__left">
+          <div class="header__logo"><a href="/"><img src="assets/img/logo-white.svg" alt="" id="headerLogo"></a></div>
+        </div>
+        <div class="header__center">
+          <ul>
+            <li><a href="#works" class="header-link">Influencers</a></li>
+            <li><a href="#features" class="header-link">Brands</a></li>
+            <li><a href="#" class="header-link">FAQs</a></li>
+            <li><a href="#" class="header-link">Blog</a></li>
+          </ul>
+        </div>
+        <div class="header__right">
+          <ul>
+            <li><a href="#signup" class="button header-link__influencers-login">INFLUENCERS LOG IN</a></li>
+            <li><a href="#signup" class="button header-link__login">LOG IN</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="header header--mobile">
+    <div class="header--mobile__menu__nav">
+      <div class="header--mobile__left">
+        <div class="header__logo"><a href="/"><img src="assets/img/logo-white.svg" alt=""></a></div>
+      </div>
+      <div class="header--mobile__right">
+        <div id="nav-mob">
+          <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header--mobile__menu">
+      <ul>
+        <li><a href="#works" class="header-link">Influencers</a></li>
+        <li><a href="#features" class="header-link">Brands</a></li>
+        <li><a href="#" class="header-link">FAQs</a></li>
+        <li><a href="#s" class="header-link">Blog</a></li>
+        <li class="mobile__link--primary"><a href="#signup" class="header-cta">INFLUENCERS Log In </a></li>
+        <li class="mobile__link--secondary"><a href="#signup" class="header-cta">LOG IN</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <div class="hero">
+    <div class="container">
+      <div class="hero-wrapper row center-xs">
+        <div class="hero__center col-md-12 col-xs-12">
+          <h1>Frequently Asked Questions</h1>
+          <h4 class="hero-quote">
+            Engage with Generation Z in the most <br /> engaging ways on the planet.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="row faq-body">
+        <div class="col-md-4">
+          <h1 class="faq-body__quick">Quick Links</h1>
+          <ul>
+            <li><a href="">Something</a></li>
+            <li><a href="">Something</a></li>
+            <li><a href="">Something</a></li>
+            <li><a href="">Something</a></li>
+          </ul>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-7 faq-body__content">
+          <h1>Brands Questions</h1>
+          <div class="faq-body__content__desc">Questions regarding platform etc</div>
+          <div class="faq toggle">
+            <div class="icon"><img alt="expand" class="logo" src="/assets/icons/down-1b92571e68f78938597e8a0d8ebe3c56dd555d4d583dd212506f93c6b4108e11.svg"></div>
+            <div class="toggle-title ">
+              <h3>
+              <span class="faq__title">What type of countries can you target?</span>
+              </h3>
+            </div>
+            <div class="toggle-inner" style="display: none;">
+              <p>UK specifically<br>USA specifically<br>Global</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands">
+    <div class="brands__wrapper row center-xs">
+      <div class="brands__content col-md-10 col-xs-12 center-xs">
+        <h2 class="text-center">Join the 300 plus brands using Fanbytes to win.</h2>
+        <div class="row">
+          <div class="col-md-3 col-xs-6">
+            <div class="brands__image"><img src="assets/img/brands/sony.png" alt=""></div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="brands__image"><img src="assets/img/brands/universal.png" alt=""></div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="brands__image"><img src="assets/img/brands/warner.png" alt=""></div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="brands__image"><img src="assets/img/brands/deezer.png" alt=""></div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="brands__image"><img src="assets/img/brands/apple.png" alt=""></div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="brands__image"><img src="assets/img/brands/ncs.png" alt=""></div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="brands__image"><img src="assets/img/brands/charlotte.png" alt=""></div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="brands__image"><img src="assets/img/brands/adidas.png" alt=""></div>
+          </div>
+        </div>
+        <div class="row">
+          <a href="#" class="primary-link primary-link--orange primary-link--arrow">Check out our Case Studies <i></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how testimonials" id="testimonials">
+    <div class="testimonials-wrapper container center-xs">
+      <div class="testimonials__content col-md-8 col-xs-12 center-xs center">
+        <h2>What our clients say about us.</h2>
+      </div>
+      <div class="row testimonials__cards">
+        <div class="col-xs-12 col-md-4 testimonials__card">
+          <img src="assets/img/icons/quote.svg" alt="" class="testimonials__img--quote">
+          <div class="testimonials__quote">Not only do Fanbytes understand Snapchat inside out but also have a strong distribution network to maximise engagement
+            and ROI on your content.</div>
+          <div class="testimonials__person">
+            <img src="assets/img/testimonials/kate-stripe.jpg" alt="">
+            <div class="testimonials__details">
+              <div class="name">Megan Julian</div>
+              <div class="job">Global Head of Operations, Deezer</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4 testimonials__card">
+          <img src="assets/img/icons/quote.svg" alt="" class="testimonials__img--quote">
+          <div class="testimonials__quote">Not only do Fanbytes understand Snapchat inside out but also have a strong distribution network to maximise engagement
+            and ROI on your content.</div>
+          <div class="testimonials__person">
+            <img src="assets/img/testimonials/kate-stripe.jpg" alt="">
+            <div class="testimonials__details">
+              <div class="name">Megan Julian</div>
+              <div class="job">Global Head of Operations, Deezer</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4 testimonials__card">
+          <img src="assets/img/icons/quote.svg" alt="" class="testimonials__img--quote">
+          <div class="testimonials__quote">Not only do Fanbytes understand Snapchat inside out but also have a strong distribution network to maximise engagement
+            and ROI on your content.</div>
+          <div class="testimonials__person">
+            <img src="assets/img/testimonials/kate-stripe.jpg" alt="">
+            <div class="testimonials__details">
+              <div class="name">Megan Julian</div>
+              <div class="job">Global Head of Operations, Deezer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands">
+    <div class="brands__wrapper row center-xs">
+      <div class="brands__content col-md-10 col-xs-12 center-xs">
+        <h2 class="text-center">How Fanbytes Works</h2>
+        <h5 class="text-center">We’ve created a tool that gives you deep access to millenials.</h5>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 works-card">
+            <div class="works-card__description">
+              <h2 class="works-card__title works-card__title--create">01. Create</h2>
+              <h5 class="works-card__brief">Our design network can create Snapchat optimised adverts to run on our influencer network.</h5>
+              <a href="#" class="primary-link works-card__link works-card__link--create">GET STARTED NOW<i></i></a>
+            </div>
+            <div class="works-card__media">
+              <img src="assets/img/create-illustration@2x.png" alt="">
+            </div>
+          </div>
+          <div class="col-xs-10 col-xs-offset-1 works-card">
+            <div class="works-card__description">
+              <h2 class="works-card__title works-card__title--distribute">02. Distribute</h2>
+              <h5 class="works-card__brief">The Mobile Ads are then distributed through our network with influencers top and tailing the content.</h5>
+              <a href="#" class="primary-link works-card__link works-card__link--distribute">GET STARTED NOW <i></i></a>
+            </div>
+            <div class="works-card__media">
+              <img src="assets/img/distribute-illustration@2x.png" alt="">
+            </div>
+          </div>
+          <div class="col-xs-10 col-xs-offset-1 works-card">
+            <div class="works-card__description">
+              <h2 class="works-card__title works-card__title--analyse">03. Analyse</h2>
+              <h5 class="works-card__brief">Gain deep insights into engagement, views, clicks manage and optimise your campaign.</h5>
+              <a href="#" class="primary-link works-card__link works-card__link--analyse">GET STARTED NOW <i></i></a>
+            </div>
+            <div class="works-card__media">
+              <img src="assets/img/analyse-illustration@2x.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book-signup">
+    <div class="book-signup__wrapper row center-xs">
+      <div class="book-signup__content col-md-8 col-xs-12 center-xs">
+        <div class="row middle-md">
+          <div class="col-xs-12 col-md-6 book-signup__image">
+            <img src="assets/img/book@2x.png" alt="">
+          </div>
+          <div class="col-xs-12 col-md-6 book-signup__content">
+            <div class="book-signup__title">SNAPCHAT HACKS EVERY MARKETER SHOULD KNOW</div>
+            <div class="book-signup__brief">Backed by studing 150 Snapchat Brand Campaigns</div>
+            <form action="" class="book-signup__form">
+              <input type="email" placeholder="Email Address"><input type="submit" value="DOWNLOAD">
+            </form>
+            <div class="book-signup__nospam">No Spam. Unsubscribe anytime.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="news">
+    <div class="news__wrapper container center-xs">
+      <div class="news__content col-md-12 col-xs-12 center-xs">
+        <h2 class="text-center">In the news</h2>
+        <h5 class="text-center">We’ve been featured all over the world for our groundbreaking practice.</h5>
+        <div class="news__cards row center-xs">
+          <div class="col-xs-10 col-md-offset-0 col-md-4">
+            <div class="news__card">
+              <div class="news__text">“They are worth every penny and some more text here from the article.”</div>
+              <img class="news__media" src="assets/img/media/buzzfeed.png" alt="">
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-offset-0 col-md-4">
+            <div class="news__card">
+              <div class="news__text">“They are worth every penny and some more text here from the article.”</div>
+              <img class="news__media" src="assets/img/media/buzzfeed.png" alt="">
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-offset-0 col-md-4">
+            <div class="news__card">
+              <div class="news__text">“They are worth every penny and some more text here from the article.”</div>
+              <img class="news__media" src="assets/img/media/buzzfeed.png" alt="">
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-offset-0 col-md-4">
+            <div class="news__card">
+              <div class="news__text">“They are worth every penny and some more text here from the article.”</div>
+              <img class="news__media" src="assets/img/media/buzzfeed.png" alt="">
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-offset-0 col-md-4">
+            <div class="news__card">
+              <div class="news__text">“They are worth every penny and some more text here from the article.”</div>
+              <img class="news__media" src="assets/img/media/buzzfeed.png" alt="">
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-offset-0 col-md-4">
+            <div class="news__card">
+              <div class="news__text">“They are worth every penny and some more text here from the article.”</div>
+              <img class="news__media" src="assets/img/media/buzzfeed.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a href="#" class="primary-link primary-link--orange primary-link--arrow">Check out our Case Studies <i></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-studies">
+    <div class="case-studies__wrapper row center-xs">
+      <div class="case-studies__content col-md-10 col-xs-12 center-xs">
+        <h2>How Brands Have Used Fanbytes</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="case-studies__card">
+              <div class="case-studies__media--image"><img class="" src="assets/img/covers/charlotte@2x.png" alt=""></div>
+              <div class="case-studies__text">Some Text about working with apple right here. This is a container that is big enough to write some stuff.</div>
+              <div>
+                <img class="case-studies__brand" src="assets/img/covers/charlotte-logo@2x.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="case-studies__card">
+              <div class="case-studies__media--image"><img class="" src="assets/img/covers/charlotte@2x.png" alt=""></div>
+              <div class="case-studies__text">Some Text about working with apple right here. This is a container that is big enough to write some stuff.</div>
+              <div>
+                <img class="case-studies__brand" src="assets/img/covers/charlotte-logo@2x.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="case-studies__card">
+              <div class="case-studies__media--image"><img class="" src="assets/img/covers/charlotte@2x.png" alt=""></div>
+              <div class="case-studies__text">Some Text about working with apple right here. This is a container that is big enough to write some stuff.</div>
+              <div>
+                <img class="case-studies__brand" src="assets/img/covers/charlotte-logo@2x.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="case-studies__card">
+              <div class="case-studies__media--image"><img class="" src="assets/img/covers/charlotte@2x.png" alt=""></div>
+              <div class="case-studies__text">Some Text about working with apple right here. This is a container that is big enough to write some stuff.</div>
+              <div>
+                <img class="case-studies__brand" src="assets/img/covers/charlotte-logo@2x.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="case-studies__card">
+              <div class="case-studies__media--image"><img class="" src="assets/img/covers/charlotte@2x.png" alt=""></div>
+              <div class="case-studies__text">Some Text about working with apple right here. This is a container that is big enough to write some stuff.</div>
+              <div>
+                <img class="case-studies__brand" src="assets/img/covers/charlotte-logo@2x.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="case-studies__card">
+              <div class="case-studies__media--image"><img class="" src="assets/img/covers/charlotte@2x.png" alt=""></div>
+              <div class="case-studies__text">Some Text about working with apple right here. This is a container that is big enough to write some stuff.</div>
+              <div>
+                <img class="case-studies__brand" src="assets/img/covers/charlotte-logo@2x.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a href="#" class="primary-link primary-link--orange primary-link--arrow">Check out our Case Studies <i></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog">
+    <div class="blog__wrapper row center-xs">
+      <div class="blog__content col-md-10 col-xs-12 center-xs">
+        <h2>Behind the Scenes <i></i></h2>
+        <h5>Get insights from the brightest minds behind the GenZ Marketing</h5>
+        <div class="row blog__cards">
+          <div class="col-md-4 col-xs-12 blog__card blog__card--featured">
+            <img class="blog__media__image" src="assets/img/blog-dummy.png" alt="blog__media">
+            <div class="blog__title">AR is the next Internet and Snapchat has a leg up on everyone</div>
+            <div class="blog__author">
+              <a href="#" class="read-more">Read More <img src="assets/img/icons/arrow-white.svg" alt=""></a>
+              <div class="blog__author__details">
+                <div class="blog__image">
+                  <img src="assets/img/blog/miri.png" alt="">
+                </div>
+                Miri
+              </div><img src="assets/img/icons/arrow-white.svg" alt="">
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 blog__card">
+            <img class="case-studies__media--image" src="assets/img/blog-dummy.png" alt="blog__media">
+            <div class="blog__title">AR is the next Internet and Snapchat has a leg up on everyone</div>
+            <div class="blog__blurb">Snapchat has been a busy bee over the last few months when it comes to the Stories Page and yet another feature</div>
+            <div class="blog__author">
+              <a href="#" class="read-more">Read More <img src="assets/img/icons/arrow-white.svg" alt=""></a>
+              <div class="blog__author__details">
+                <div class="blog__image">
+                  <img src="assets/img/blog/lucy.png" alt="">
+                </div>
+                Lucy
+              </div><img src="assets/img/icons/arrow-icon.svg" alt="">
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 blog__card">
+            <img class="case-studies__media--image" src="assets/img/blog-dummy.png" alt="blog__media">
+            <div class="blog__title">AR is the next Internet and Snapchat has a leg up on everyone</div>
+            <div class="blog__blurb">Snapchat has been a busy bee over the last few months when it comes to the Stories Page and yet another feature</div>
+            <div class="blog__author">
+              <a href="#" class="read-more">Read More <img src="assets/img/icons/arrow-white.svg" alt=""></a>
+              <div class="blog__author__details">
+                <div class="blog__image">
+                  <img src="assets/img/blog/lucy.png" alt="">
+                </div>
+                Lucy
+              </div><img src="assets/img/icons/arrow-icon.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a href="#" class="primary-link primary-link--orange primary-link--arrow">Check our Blog <i></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact__container container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 center-md contact__title">
+          <h2>Let's Get In Touch</h2>
+          <h5>Get insights from the brightest minds behind the GenZ Marketing</h5>
+        </div>
+      </div>
+      <div class="row contact__typeform">
+
+      </div>
+      <div class="row">
+        <a href="#" class="primary-link primary-link--orange primary-link--arrow">I'm an influencer<i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="col-md-5 col-xs-12">
+          <a href="#"><img src="assets/img/logo.svg" alt="Fanbytes"></a>
+          <div class="footer-text">
+            Fanbytes is what happens when a group of young geeks start an advertising company for Generation Z.
+          </div>
+        </div>
+        <div class="col-md-7 col-xs-12 footer-menu">
+          <div class="row footer-menu__title">
+            MENU
+          </div>
+          <div class="row">
+            <ul class="footer-links">
+              <li class="footer-link"><a href="/">Home</a></li>
+              <li class="footer-link"><a href="#works">Brands</a></li>
+              <li class="footer-link"><a href="https://medium.com/show-and-sell">Blogs</a></li>
+              <li class="footer-link"><a href="https://angel.co/blot-1/jobs">Case Studies</a></li>
+              <li class="footer-link"><a href="#">FAQs</a></li>
+              <li class="footer-link"><a href="#testimonials">Influencers</a></li>
+              <li class="footer-link"><a href="#">Privacy</a></li>
+              <li class="footer-link"><a href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer__left col-xs-12 col-md-5 col-md-offset-1 start-md center-xs">
+          Copyright © 2018
+        </div>
+        <div class="footer__right col-md-7 col-xs-12">
+          <div class="col-md-4 col-xs-12 footer__right__contact">
+            <div class="footer__right__links">REACH OUT TO US</div>
+            <a class="footer__right__links--mail" mailto="hello@fanbytes.co.uk">hello@fanbytes.co.uk</a>
+          </div>
+          <div class="col-md-4 col-xs-12 footer__right__address">
+            <div class="footer__right__links">HQ</div>
+            <div>22 Wenlock Road<br> London
+              <br> N1 7GU
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 footer__right__social">
+            <div class="footer__right__links">Social</div>
+            <a>FACEBOOK/</a><span><a>INSTAGRAM</a></span>
+            <a>TWITTER/</a><span><a>LINKEDIN</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jquery-2.1.1.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

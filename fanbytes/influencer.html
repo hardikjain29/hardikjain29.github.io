@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+  <!-- Metatags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fanbytes</title>
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- load and instantiate ScrollReveal first -->
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    var MTIProjectId = 'c7b6dafa-7335-4101-9297-c3d0a43e33fa';
+    (function () {
+      var mtiTracking = document.createElement('script');
+      mtiTracking.type = 'text/javascript';
+      mtiTracking.async = 'true';
+      mtiTracking.src = 'mtiFontTrackingCode.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mtiTracking);
+    })();
+  </script>
+  <script>
+      window.sr = ScrollReveal();
+      // Add class to <html> if ScrollReveal is supported 
+      // Note: this method is deprecated, and only works in version 3 
+      if (sr.isSupported()) {
+        document.documentElement.classList.add('sr');
+      }
+      function openMenu() {
+        document.getElementsByClassName('header__menu')[0].style.display = 'block';
+        document.body.style.overflow = "hidden";
+      }
+      function closeMenu() {
+        document.getElementsByClassName('header__menu')[0].style.display = 'none';
+        document.body.style.overflow = "scroll";
+      }
+  </script>
+
+  <style>
+    /* Ensure elements load hidden before ScrollReveal runs */
+
+    .sr .fooReveal {
+      visibility: hidden;
+    }
+  </style>
+
+</head>
+
+<body class="influencer-page">
+
+  <header class="header header--desktop">
+    <div class="container">
+      <div class="header__wrapper row start-xs middle-md  padding-1">
+        <div class="header__left">
+          <div class="header__logo"><a href="/"><img src="assets/img/logo-white.svg" alt="" id="headerLogo"></a></div>
+        </div>
+        <div class="header__center">
+          <ul>
+            <li><a href="#works" class="header-link">Influencers</a></li>
+            <li><a href="#features" class="header-link">Brands</a></li>
+            <li><a href="#" class="header-link">FAQs</a></li>
+            <li><a href="#" class="header-link">Blog</a></li>
+          </ul>
+        </div>
+        <div class="header__right">
+          <ul>
+            <li><a href="#signup" class="button header-link__influencers-login">INFLUENCERS LOG IN</a></li>
+            <li><a href="#signup" class="button header-link__login">LOG IN</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="header header--mobile">
+    <div class="header--mobile__menu__nav">
+      <div class="header--mobile__left">
+        <div class="header__logo"><a href="/"><img src="assets/img/logo-white.svg" alt=""></a></div>
+      </div>
+      <div class="header--mobile__right">
+        <div id="nav-mob">
+          <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header--mobile__menu">
+      <ul>
+        <li><a href="#works" class="header-link">Influencers</a></li>
+        <li><a href="#features" class="header-link">Brands</a></li>
+        <li><a href="#" class="header-link">FAQs</a></li>
+        <li><a href="#s" class="header-link">Blog</a></li>
+        <li class="mobile__link--primary"><a href="#signup" class="header-cta">INFLUENCERS Log In </a></li>
+        <li class="mobile__link--secondary"><a href="#signup" class="header-cta">LOG IN</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <div class="hero">
+      <div class="hero-wrapper row center-xs">
+
+        <div class="hero__left col-md-6 col-xs-12">
+          <h1>Get paid to run cool video content from the worlds biggest brands</h1>
+          <h4 class="hero-quote">
+            “This Startup Is Helping Teen Influencers Make Thousands of Dollars a Month on Snapchat”
+          </h4>
+          <img src="/assets/img/brands/adweek-white.png" alt="forbes" class="hero__media">
+          
+          <div class="hero-platform">
+            Platforms we support :
+            <div class="hero-platform__images">
+              <img src="/assets/img/icons/snapchat-logo.svg" alt="forbes" class="hero__media">
+              <img src="/assets/img/icons/instagram-logo.svg" alt="forbes" class="hero__media">
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right col-md-6 col-xs-12">
+          <img src="/assets/img/hero/influencer-illustration.svg" alt="">
+        </div>
+
+      </div>
+  </div>
+
+  <div class="how-it-works">
+    <div class="container how-it-works__content">
+
+      <div class="row ">
+
+        <div class="col-xs-12 section-heading">
+          <h3 class="section-heading__title">How It Works</h3>
+          <h6 class="section-heading__brief">We've created a tool that gives you deep access to millenials</h6>
+        </div>
+
+      </div>
+
+        <div class="row works">
+
+           <div class="col-xs-12 col-md-3 works-step">
+            <img src="/assets/img/icons/deals.svg" alt="" class="icon">
+            <h4>1. Get Deals</h4>
+            <h6>Sign up your accounts or social media pages you own. </h6>
+          </div>
+
+          <div class="col-xs-12 col-md-3 works-step">
+            <img src="/assets/img/icons/film.svg" alt="" class="icon">
+            <h4>2. Film</h4>
+            <h6> Our machine learning software then matches you with cool video ads to run on your channels.</h6>
+          </div>
+
+          <div class="col-xs-12 col-md-3 works-step">
+            <img src="/assets/img/icons/post.svg" alt="" class="icon">
+            <h4>3. Post</h4>
+            <h6>You decide whether or not to run these on your channels</h6>
+          </div>
+
+          <div class="col-xs-12 col-md-3 works-step">
+            <img src="/assets/img/icons/paid.svg" alt="" class="icon">
+            <h4>4. Get Paid</h4>
+            <h6>Get paid according to your views.</h6>
+          </div> 
+
+        </div>
+
+        <div class="row">
+          <a href="#" class="primary-link primary-link--orange primary-link--arrow">Sign Up For Fanbytes <i></i></a>
+        </div>
+
+    </div>
+  </div>
+
+    <section class="brands">
+      <div class="brands__wrapper row center-xs">
+        <div class="brands__content col-md-10 col-xs-12 center-xs">
+          <h2 class="text-center">Join the 300 plus brands using Fanbytes to win.</h2>
+          <div class="row">
+            <div class="col-md-offset-1 col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/sony.png" alt=""></div>
+            </div>
+            <div class="col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/universal.png" alt=""></div>
+            </div>
+            <div class="col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/warner.png" alt=""></div>
+            </div>
+            <div class="col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/deezer.png" alt=""></div>
+            </div>
+            <div class="col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/apple.png" alt=""></div>
+            </div>
+            <div class="col-md-offset-1 col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/yougov.png" alt=""></div>
+            </div>
+            <div class="col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/ncs.png" alt=""></div>
+            </div>
+            <div class="col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/charlotte.png" alt=""></div>
+            </div>
+            <div class="col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/youtubered.png" alt=""></div>
+            </div>
+            <div class="col-md-2 col-xs-6">
+              <div class="brands__image"><img src="assets/img/brands/apple.png" alt=""></div>
+            </div>
+          </div>
+          <div class="row">
+            <a href="#" class="primary-link primary-link--orange primary-link--arrow">Check out our Case Studies <i></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="pay-stats">
+    <div class="pay-stats__wrapper row center-xs">
+      <div class="pay-stats__content col-md-8 col-xs-12 center-xs">
+        <div class="row middle-md center-xs">
+          <div class="col-xs-12 col-md-6 pay-stats__content">
+            <div class="pay-stats__stat">
+              <h1>£300,00</h1>
+              <h3>Paid out last month</h3>             
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 pay-stats__content">
+            <div class="pay-stats__content--double">
+                <div class="col-xs-12 col-md-6 pay-stats__stat">
+                  <h4>1,100 </h4>
+                  <h6>Influencers Served</h6>
+                </div>
+                <div class="col-xs-12 col-md-6 pay-stats__stat">
+                  <h4>100</h4>
+                  <h6>Active Brands</h6>
+                </div>             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="how testimonials" id="testimonials">
+      <div class="testimonials-wrapper container center-xs">
+        <div class="testimonials__content col-md-8 col-xs-12 center-xs center">
+          <h2>What our clients say about us.</h2>
+        </div>
+        <div class="row testimonials__cards">
+          <div class="col-xs-12 col-md-3 testimonials__card">
+            <img src="assets/img/icons/quote.svg" alt="" class="testimonials__img--quote">
+            <div class="testimonials__quote">It makes my life a lot easier.</div>
+            <div class="testimonials__person">
+              <img src="assets/img/testimonials/bianca.png" alt="">
+              <div class="testimonials__details"><div class="name">MaxPlaysFifa</div></div>
+            </div>
+            <div class="testimonials__company"><img src="assets/img/testimonials/deezer.png" alt=""></div>
+          </div>
+
+          <div class="col-xs-12 col-md-3 testimonials__card">
+            <img src="assets/img/icons/quote.svg" alt="" class="testimonials__img--quote">
+            <div class="testimonials__quote">Where else are you going to get paid to do snapchat work!..Like that's just great!</div>
+            <div class="testimonials__person">
+              <img src="assets/img/testimonials/joe.png" alt="">
+              <div class="testimonials__details"><div class="name">Drewissharing</div></div>
+            </div>
+            <div class="testimonials__company"><img src="assets/img/testimonials/plato.png" alt=""></div>
+          </div>
+
+          <div class="col-xs-12 col-md-3 testimonials__card">
+            <img src="assets/img/icons/quote.svg" alt="" class="testimonials__img--quote">
+            <div class="testimonials__quote">They've enabled me to make my passion my job.</div>
+            <div class="testimonials__person">
+              <img src="assets/img/testimonials/mickey.png" alt="">
+              <div class="testimonials__details"><div class="name">NinkComPoop</div></div>
+            </div>
+            <div class="testimonials__company"><img src="assets/img/testimonials/universal.png" alt=""></div>
+          </div>
+
+          <div class="col-xs-12 col-md-3 testimonials__card">
+            <img src="assets/img/icons/quote.svg" alt="" class="testimonials__img--quote">
+            <div class="testimonials__quote">It's quick, it's easy and it's so much fun.</div>
+            <div class="testimonials__person">
+              <img src="assets/img/testimonials/mickey.png" alt="">
+              <div class="testimonials__details"><div class="name">carmie_sellitto</div></div>
+            </div>
+            <div class="testimonials__company"><img src="assets/img/testimonials/universal.png" alt=""></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  <section class="book-signup">
+    <div class="book-signup__wrapper container ">
+      <div class="row center-xs">
+        <div class="book-signup__content col-md-8 col-xs-12 center-xs">
+          <div class="row middle-md">
+            <div class="col-xs-12 col-md-6 book-signup__image">
+              <img src="assets/img/book@2x.png" alt="">
+            </div>
+            <div class="col-xs-12 col-md-6 book-signup__content">
+              <div class="book-signup__title">SNAPCHAT HACKS EVERY MARKETER SHOULD KNOW</div>
+              <div class="book-signup__brief">Backed by studing 150 Snapchat Brand Campaigns</div>
+              <form action="" class="book-signup__form">
+                <input type="email" placeholder="Email Address"><input type="submit" value="DOWNLOAD">
+              </form>
+              <div class="book-signup__nospam">No Spam. Unsubscribe anytime.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inf-case-study">
+    <div class="inf-case-study__wrapper row center-xs">
+        <div class="row middle-md">
+          <div class="col-xs-12 col-md-6 inf-case-study__image">
+            <img src="/assets/img/influencers/kieran.png" alt="">
+          </div>
+          <div class="col-xs-12 col-md-6 inf-case-study__content">
+            <div class="inf-case-study__title">Make the most out of your audience.</div>
+            <div class="inf-case-study__brief">
+                <ul>
+                  <li>- Kieran earns £12,000 per month</li>
+                  <li>- Kieran earns £1,000 per ad</li>
+                  <li>- Another fact about Kieran</li>
+                </ul>
+            </div>
+            <a href="#" class="primary-link primary-link--white primary-link--arrow primary-link--arrow--white">Sign Up as an influencer today<i></i></a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact__container container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 center-md contact__title">
+          <h2>Let's Get In Touch</h2>
+          <h5>Get insights from the brightest minds behind the GenZ Marketing</h5>
+        </div>
+      </div>
+      <div class="row contact__typeform">
+
+      </div>
+      <div class="row">
+        <a href="#" class="primary-link primary-link--orange primary-link--arrow">I'm an influencer<i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="col-md-5 col-xs-12">
+          <a href="#"><img src="assets/img/logo.svg" alt="Fanbytes"></a>
+          <div class="footer-text">
+            Fanbytes is what happens when a group of young geeks start an advertising company for Generation Z.
+          </div>
+        </div>
+        <div class="col-md-7 col-xs-12 footer-menu">
+          <div class="row footer-menu__title">
+            MENU
+          </div>
+          <div class="row">
+            <ul class="footer-links">
+              <li class="footer-link"><a href="/">Home</a></li>
+              <li class="footer-link"><a href="#works">Brands</a></li>
+              <li class="footer-link"><a href="https://medium.com/show-and-sell">Blogs</a></li>
+              <li class="footer-link"><a href="https://angel.co/blot-1/jobs">Case Studies</a></li>
+              <li class="footer-link"><a href="#">FAQs</a></li>
+              <li class="footer-link"><a href="#testimonials">Influencers</a></li>
+              <li class="footer-link"><a href="#">Privacy</a></li>
+              <li class="footer-link"><a href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer__left col-xs-12 col-md-5 col-md-offset-1 start-md center-xs">
+          Copyright © 2018
+        </div>
+        <div class="footer__right col-md-7 col-xs-12">
+          <div class="col-md-4 col-xs-12 footer__right__contact">
+            <div class="footer__right__links">REACH OUT TO US</div>
+            <a class="footer__right__links--mail" mailto="hello@fanbytes.co.uk">hello@fanbytes.co.uk</a>
+          </div>
+          <div class="col-md-4 col-xs-12 footer__right__address">
+            <div class="footer__right__links">HQ</div>
+            <div>22 Wenlock Road<br> London
+              <br> N1 7GU
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 footer__right__social">
+            <div class="footer__right__links">Social</div>
+            <a>FACEBOOK/</a><span><a>INSTAGRAM</a></span>
+            <a>TWITTER/</a><span><a>LINKEDIN</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jquery-2.1.1.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

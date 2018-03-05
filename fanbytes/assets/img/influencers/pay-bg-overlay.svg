@@ -1,0 +1,69 @@
+<svg width="1440" height="554" viewBox="0 0 1440 554" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>pay-bg-overlay</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-18877 -60344)">
+<g id="pay-bg-overlay">
+<g id="Rectangle 3">
+<use xlink:href="#path0_fill" transform="translate(18877 60344)" fill="#FF2638"/>
+</g>
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="Rectangle 2.2">
+<use xlink:href="#path1_fill" transform="translate(18877 60345)" fill="url(#paint1_linear)"/>
+</g>
+</mask>
+<g id="Ellipse 2.2" mask="url(#mask0_alpha)">
+<use xlink:href="#path2_fill" transform="translate(19075 60253)" fill="#FF2638"/>
+<mask id="mask1_outline_ins">
+<use xlink:href="#path2_fill" fill="white" transform="translate(19075 60253)"/>
+</mask>
+<g mask="url(#mask1_outline_ins)">
+<use xlink:href="#path3_stroke_2x" transform="translate(19075 60253)" fill="#FFFFFF" fill-opacity="0.2"/>
+</g>
+</g>
+<g id="Ellipse 2.3" mask="url(#mask0_alpha)">
+<use xlink:href="#path4_fill" transform="translate(19284.5 60408.6)" fill="#FE3912"/>
+<mask id="mask2_outline_ins">
+<use xlink:href="#path4_fill" fill="white" transform="translate(19284.5 60408.6)"/>
+</mask>
+<g mask="url(#mask2_outline_ins)">
+<use xlink:href="#path5_stroke_2x" transform="translate(19284.5 60408.6)" fill="#FFFFFF" fill-opacity="0.2"/>
+</g>
+</g>
+<g id="Ellipse 2" mask="url(#mask0_alpha)">
+<use xlink:href="#path6_fill" transform="translate(19101 60278.9)" fill="#FF4E00" fill-opacity="0.75"/>
+</g>
+<g id="Ellipse 2.5" mask="url(#mask0_alpha)">
+<use xlink:href="#path7_fill" transform="translate(18771 60781)" fill="#FF4E00" fill-opacity="0.25"/>
+<mask id="mask3_outline_ins">
+<use xlink:href="#path7_fill" fill="white" transform="translate(18771 60781)"/>
+</mask>
+<g mask="url(#mask3_outline_ins)">
+<use xlink:href="#path8_stroke_2x" transform="translate(18771 60781)" fill="#FFFFFF" fill-opacity="0.25"/>
+</g>
+</g>
+<g id="Ellipse 2.4" mask="url(#mask0_alpha)">
+<use xlink:href="#path9_fill" transform="translate(18805 60815)" fill="#FF4E00" fill-opacity="0.75"/>
+</g>
+<g id="Ellipse 2.1" mask="url(#mask0_alpha)">
+<use xlink:href="#path10_fill" transform="translate(19305.9 60430)" fill="#FF8A00" fill-opacity="0.5"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint1_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1709.5 438.463 -1141.75 -14257.4 2010.87 7157.33)">
+<stop offset="0" stop-color="#FF4004"/>
+<stop offset="1" stop-color="#FF047C"/>
+</linearGradient>
+<path id="path0_fill" d="M 0 0L 1440 0L 1440 554L 0 554L 0 0Z"/>
+<path id="path1_fill" d="M 0 0L 1440 0L 1440 553L 0 553L 0 0Z"/>
+<path id="path2_fill" d="M 353.554 176.71C 353.554 274.304 274.408 353.419 176.777 353.419C 79.1457 353.419 0 274.304 0 176.71C 0 79.1156 79.1457 0 176.777 0C 274.408 0 353.554 79.1156 353.554 176.71Z"/>
+<path id="path3_stroke_2x" d="M 352.554 176.71C 352.554 273.751 273.856 352.419 176.777 352.419L 176.777 354.419C 274.96 354.419 354.554 274.856 354.554 176.71L 352.554 176.71ZM 176.777 352.419C 79.6976 352.419 1 273.751 1 176.71L -1 176.71C -1 274.856 78.5937 354.419 176.777 354.419L 176.777 352.419ZM 1 176.71C 1 79.6682 79.6976 1 176.777 1L 176.777 -1C 78.5937 -1 -1 78.5629 -1 176.71L 1 176.71ZM 176.777 1C 273.856 1 352.554 79.6682 352.554 176.71L 354.554 176.71C 354.554 78.5629 274.96 -1 176.777 -1L 176.777 1Z"/>
+<path id="path4_fill" d="M 248.461 124.183C 248.461 192.767 192.841 248.366 124.23 248.366C 55.6198 248.366 0 192.767 0 124.183C 0 55.5986 55.6198 0 124.23 0C 192.841 0 248.461 55.5986 248.461 124.183Z"/>
+<path id="path5_stroke_2x" d="M 247.461 124.183C 247.461 192.215 192.289 247.366 124.23 247.366L 124.23 249.366C 193.393 249.366 249.461 193.32 249.461 124.183L 247.461 124.183ZM 124.23 247.366C 56.1717 247.366 1 192.215 1 124.183L -1 124.183C -1 193.32 55.0679 249.366 124.23 249.366L 124.23 247.366ZM 1 124.183C 1 56.1513 56.1717 1 124.23 1L 124.23 -1C 55.0679 -1 -1 55.046 -1 124.183L 1 124.183ZM 124.23 1C 192.289 1 247.461 56.1513 247.461 124.183L 249.461 124.183C 249.461 55.046 193.393 -1 124.23 -1L 124.23 1Z"/>
+<path id="path6_fill" d="M 301.656 150.771C 301.656 234.039 234.128 301.541 150.828 301.541C 67.5279 301.541 0 234.039 0 150.771C 0 67.5023 67.5279 0 150.828 0C 234.128 0 301.656 67.5023 301.656 150.771Z"/>
+<path id="path7_fill" d="M 211 105.5C 211 163.766 163.766 211 105.5 211C 47.234 211 0 163.766 0 105.5C 0 47.234 47.234 0 105.5 0C 163.766 0 211 47.234 211 105.5Z"/>
+<path id="path8_stroke_2x" d="M 210 105.5C 210 163.214 163.214 210 105.5 210L 105.5 212C 164.318 212 212 164.318 212 105.5L 210 105.5ZM 105.5 210C 47.7862 210 1 163.214 1 105.5L -1 105.5C -1 164.318 46.6817 212 105.5 212L 105.5 210ZM 1 105.5C 1 47.7862 47.7862 1 105.5 1L 105.5 -1C 46.6817 -1 -1 46.6817 -1 105.5L 1 105.5ZM 105.5 1C 163.214 1 210 47.7862 210 105.5L 212 105.5C 212 46.6817 164.318 -1 105.5 -1L 105.5 1Z"/>
+<path id="path9_fill" d="M 143 71.5C 143 110.988 110.988 143 71.5 143C 32.0116 143 0 110.988 0 71.5C 0 32.0116 32.0116 0 71.5 0C 110.988 0 143 32.0116 143 71.5Z"/>
+<path id="path10_fill" d="M 205.645 102.783C 205.645 159.549 159.61 205.567 102.822 205.567C 46.0352 205.567 0 159.549 0 102.783C 0 46.0177 46.0352 0 102.822 0C 159.61 0 205.645 46.0177 205.645 102.783Z"/>
+</defs>
+</svg>
