@@ -21,7 +21,6 @@
   margin-top: 48px;
 }
 body {
-  background-color: #262626;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
@@ -29,17 +28,14 @@ body {
   overflow: hidden;
 }
 .name{
-  font-size: 18px;
+  font-size: 42px;
+  line-height: 1.5;
 }
 /***********************************************************************************************/
 /* ABOUT */
 /***********************************************************************************************/
 #about {
   margin: 190px auto;
-}
-#about p {
-  text-align: center;
-  color: white;
 }
 #about .me {
   display: block;
@@ -52,13 +48,11 @@ body {
   z-index: 2;
 }
 #about .social {
-  text-align: center;
   font-size: 2.5em;
-  color: white;
   overflow: hidden;
 }
 #about .social a {
-  color: inherit;
+  color: black;
   text-decoration: none;
 }
 #about .social i {
@@ -234,60 +228,8 @@ body {
 /***********************************************************************************************/
 /* CONTACT */
 /***********************************************************************************************/
-.contact {
-  background-color: #F5FAF9;
-}
-.contact p {
-  text-align: center;
-}
-.contact input,
-.contact textarea {
-  background-color: #F5FAF9;
-  outline: none;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
-}
-.contact input[type="text"],
-.contact input[type="email"],
-.contact input[type="number"],
-.contact textarea {
-  border: none;
-  border-bottom: 1px solid black;
-  font: 300 16px/24px "Source Sans Pro", Helvetica, Arial, sans-serif;
-  min-width: 100%;
-  max-width: 100%;
-  padding: 19px;
-}
-.contact textarea {
-  margin-top: 12px;
-  height: 120px;
-  padding: 16px;
-  resize: none;
-}
-.contact input[type="submit"] {
-  border: 1px solid black;
-  border-radius: 25px;
-  width: 120px;
-  height: 46px;
-  background-color: #2b2b2b;
-  color: #dbdbdb;
-  cursor: pointer;
-  font: bold 16px/24px "Source Sans Pro", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -webkit-transition: background-color 0.4s ease-out;
-  -moz-transition: background-color 0.4s ease-out;
-  -o-transition: background-color 0.4s ease-out;
-  transition: background-color 0.4s ease-out;
-}
-.contact input[type="submit"]:hover {
-  background-color: #F5FAF9;
-  color: black;
-}
-.contact .send {
-  margin-top: 44px;
-  text-align: center;
-  margin-bottom: 40px;
+iframe .button-wrapper {
+  display: none !important;
 }
 /***********************************************************************************************/
 /* FOOTER */
@@ -307,3 +249,103 @@ footer {
   }
 }
 /* Wide Mobile Layout: 480px. */
+
+.case-study {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.case-study img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.case-study-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: rgba(0,0,0,0.75);
+}
+
+.case-study:hover .case-study-overlay{
+  display: flex;
+}
+.case-study-overlay a {
+  background: white;
+  color: black;
+  opacity: 0.9;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.case-study-overlay a:hover {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+
+.header {
+  margin-top: 1%;
+  position: relative;
+}
+
+.header-title {
+  position: absolute;
+  flex-direction: row;
+  left: 2%;
+  padding: 20px;
+  top: 90%;
+  width: 35%;
+  height: 15%;
+  z-index: 2;
+  background: white;
+}
+
+.header-title h1 {
+  font-size: 40px;
+}
+
+.header-title p {
+  font-size: 16px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+  background-color: black;
+}
+
+#screenshot {
+  margin-top: 20%;
+}
+
+#screenshot img {
+  width: 100%;
+  margin-bottom: 15%;
+}
+
+.long-desc {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.long-desc p {
+  margin-bottom: 40px;
+}
+
+.launch {
+  text-align: center;
+}
