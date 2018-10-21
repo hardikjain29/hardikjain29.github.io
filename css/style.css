@@ -307,7 +307,7 @@ footer {
   left: 2%;
   padding: 20px;
   top: 90%;
-  width: 35%;
+  width: 50%;
   height: 15%;
   z-index: 2;
   background: white;
@@ -325,7 +325,6 @@ footer {
   width: 100%;
   height: 90%;
   object-fit: contain;
-  background-color: black;
 }
 
 #screenshot {
@@ -348,4 +347,79 @@ footer {
 
 .launch {
   text-align: center;
+}
+
+
+.card h4 {
+  font-size: 48px;
+}
+section {
+  margin-bottom: 40px;
+}
+#brief h3 {
+  font-size: 16px;
+  color: grey;
+}
+#brief .stats {
+  margin-bottom: 40px;
+}
+
+#brief .stats:last-of-type {
+  margin-bottom: 0px;
+}
+
+
+#brief h5 {
+  font-size: 28px;
+}
+
+.long-desc p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.618;
+  letter-spacing: -0.002em;
+  font-weight: 400;
+  max-width: 800px;
+}
+#long h3 {
+  font-size: 16px;
+  color: grey;
+}
+
+.case-study--button {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    background-color: #52B4E3;
+    width: auto;
+    height: 60px;
+    line-height: 1;
+    padding: 0px 20px 0 20px;
+    font-size: 25px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Karla","Helvetica Neue",sans serif;
+    max-width: 610px;
+    min-width: 240px;
+    overflow: hidden;
+    margin: 40px 0;
+    text-decoration: none;
+    -moz-transition: background-color ease-out 100ms 0ms;
+    -webkit-transition: background-color ease-out 100ms 0ms;
+    -o-transition: background-color ease-out 100ms 0ms;
+    transition: background-color ease-out 100ms 0ms;
+    color: #125270;
+    -webkit-box-shadow: 0 3px 12px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 3px 12px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,0.1);
+}
+.case-study--button:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
