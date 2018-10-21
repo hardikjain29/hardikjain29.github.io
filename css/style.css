@@ -254,6 +254,7 @@ footer {
   position: relative;
   height: 100%;
   width: 100%;
+  margin-bottom: 80px;
 }
 .case-study img {
   width: 100%;
@@ -311,6 +312,37 @@ footer {
   height: 15%;
   z-index: 2;
   background: white;
+}
+
+@media only screen and (max-width: 700px) {
+  .header-title {
+    position: relative;
+    padding: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .header-title h1{
+    font-size: 24px !important;
+  }
+
+  .banner-img {
+    height: 50% !important;
+  }
+
+  #brief h3, #long h3 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .name {
+    font-size: 29px;
+    line-height: 2;
+  }
+
+  .desc {
+    text-align: center;
+  }
 }
 
 .header-title h1 {
