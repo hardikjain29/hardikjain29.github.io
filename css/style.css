@@ -67,6 +67,9 @@ body {
 #about .social #twitter:hover {
   color: #77DDF6;
 }
+#about .social #stack:hover {
+  color: #f48024;
+}
 #about .social #github:hover {
   color: black;
 }
