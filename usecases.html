@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" class="js js-focus-visible">
+<style type="text/css">
+    #relay-desktop-button {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 28px !important;
+        background-color: #2b2b30 !important;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
+        position: fixed !important;
+        cursor: pointer !important;
+        z-index: 9999999999 !important;
+        border: none !important;
+        outline: none !important;
+        min-width: 56px !important;
+        max-width: 56px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        -webkit-transition: -webkit-transform 0.3s ease-in-out;
+        -ms-transition: -ms-transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    #relay-mobile-button {
+        outline: none !important;
+        border: none !important;
+        width: 30% !important;
+        max-width: 300px;
+        position: fixed !important;
+        left: 50%;
+        margin: 0 0 0 -15% !important;
+        font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+        background-color: #2b2b30 !important;
+        color: white !important;
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 18px !important;
+        padding: 5px 0 !important;
+        height: 20px !important;
+        border-top-left-radius: 5px !important;
+        border-top-right-radius: 5px !important;
+        z-index: 214748364 !important;
+        padding: 0 !important;
+        right: initial !important;
+        top: initial !important;
+    }
+    
+    #relay-mobile-button div {
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 15px !important;
+        position: relative !important;
+        /* bottom: 5px; */
+        background-color: #2b2b30 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    #relay-mobile-button .relay-img {
+        width: 15px !important;
+    }
+    
+    #relay-mobile-button:active {
+        color: #37db6b !important;
+    }
+    
+    #relay-desktop-button:focus {
+        outline: none !important;
+        border: none !important;
+    }
+    
+    #relay-desktop-button img {
+        color: #37db6b !important;
+        border: none !important;
+        outline: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: transparent !important;
+    }
+    
+    .relay-img {
+        width: 25px !important;
+    }
+    
+    #relay-desktop-button.minimized {
+        transform: rotate(-45deg) !important;
+        -ms-transform: rotate(-45deg) !important;
+        -webkit-transform: rotate(-45deg) !important;
+    }
+    
+    #relay-mobile-button.minimized.unread::after {
+        content: attr(data-unread) !important;
+        background: #37db6b !important;
+        color: #2b2b30 !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        width: 16px !important;
+        display: flex !important;
+        font-family: Roboto !important;
+        position: absolute !important;
+        height: 16px !important;
+        border-radius: 8px !important;
+        top: 2px !important;
+        right: 4px !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    #relay-desktop-button.unread::after {
+        content: attr(data-unread) !important;
+        background: #37db6b !important;
+        color: #2b2b30 !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        width: 16px !important;
+        display: flex !important;
+        font-family: Roboto !important;
+        position: absolute !important;
+        height: 16px !important;
+        border-radius: 8px !important;
+        right: 0 !important;
+        top: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    #relay-desktop-button.minimized.unread::after {
+        transform: rotate(45deg);
+        right: -8px !important;
+        top: auto !important;
+    }
+</style>
+<style type="text/css">
+    #relay-wrapper.mobile.open {
+        -ms-transform: translateY(-100vh);
+        /* IE 9 */
+        -webkit-transform: translateY(-100vh);
+        /* Safari */
+        transform: translateY(-100vh);
+        visibility: visible;
+    }
+    
+    #relay-wrapper.mobile {
+        transition: all 0.2s ease-out;
+        height: 100vh !important;
+        top: 100vh !important;
+    }
+    
+    #relay-wrapper.mobile.closed {
+        visibility: hidden !important;
+    }
+    
+    #relay-wrapper {
+        display: visible !important;
+    }
+    
+    .toastify {
+        font-size: 14px;
+        font-family: Roboto !important;
+        color: #37db6b !important;
+        box-shadow: 0 1px 2px -2px #b3b3bc, 0 -1px 2px -2px #b3b3bc;
+        justify-content: space-between;
+        display: flex !important;
+        max-width: 400px !important;
+        align-items: center;
+    }
+    
+    .toastify p {
+        margin: 0 !important;
+        word-break: break-all !important;
+        line-height: 18px !important;
+        text-overflow: ellipsis !important;
+        overflow-x: hidden !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    .toast-close {
+        opacity: 0.6 !important;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 10px !important;
+    }
+    
+    .toastify-avatar {
+        margin: 0 20px 0 0 !important;
+        height: 16px !important;
+    }
+    
+    @media only screen and (max-width: 400px) {
+        .toastify-right {
+            right: 0px !important;
+        }
+        .toastify {
+            max-width: 100% !important;
+        }
+    }
+</style>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Usecases</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" async="" src="./analytics.js"></script>
+    <link rel="stylesheet" href="./style(1).css">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111669534-3');
+    </script>
+    <style>
+        .sub-pricing-title {
+          font-size: 12px;
+          color: #bfbfbf;
+          padding-bottom: 4px;
+        }
+        .custom-pricing {
+          font-size: 30px;
+          padding-top: 26px;
+          color: #1d2238;
+          padding-bottom: 26px;
+        }
+        .pricing-email {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .footer-access {
+          padding-left: 262px;
+          padding-right: 260px;
+        }
+        .footer-access-button {
+          background-color: #07c5f1;
+        }
+        .message-right {
+            text-align: left;
+            padding-left: 90px;
+        }
+        .usecase {
+            padding-bottom: 20px;
+        }
+      </style>
+    <style type="text/css">
+        @font-face {
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 400;
+            font-style: italic;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 500;
+            font-style: normal;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 500;
+            font-style: italic;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 700;
+            font-style: normal;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 700;
+            font-style: italic;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 900;
+            font-style: normal;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 900;
+            font-style: italic;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
+        }
+    </style>
+</head>
+
+<body class="t n" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+    <div class="nj">
+        <header class="nd">
+            <div class="tcontainern">
+                <div class="ny">
+                    <div class="ng">
+                        <h1 class="sp"><a href="./index.html"><img src="./logo.svg" alt="Sketch" width="32" height="32"></a></h1></div>
+                    <button id="tl" class="tl" aria-controls="primary-menu" aria-expanded="false"><span class="id">Menu</span> <span class="tc"><span class="th"></span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="nv">
+            <section class="rd nm sl tillustration-section-n">
+                <div class="rcontaineri">
+                    <div class="rc rf">
+                        <div class="rh">
+                            <div class="scontainero">
+                                <h1 class="sp reveal-scale-down">Usecases</h1></div>
+                        </div>
+                        <!-- <div class="rp tillustration-element-n reveal-scale-down" data-reveal-delay="100">
+                            <a class="modal-trigger" aria-controls="modal-03" data-video="https://player.vimeo.com/video/174002812" data-video-tag="iframe" href="https://preview.cruip.com/sketch/additional.html#"><img class="su" src="./video-placeholder.png" alt="Video" width="896" height="502"></a>
+                        </div>
+                        <div id="modal-03" class="tb tw">
+                            <div class="tx">
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+            <section class="nm cillustration-section-h">
+                <div class="tcontainern">
+                    <div class="rf sa">
+                        <div class="scontainero">
+                            <ul>
+                                <li>A self developed Documentation which is more on the precise and actual problems faced instead of reading through a verbose document to find out a solution.</li>
+                                <li>Faster onboarding of new employees since they can find the answers right there instead of asking anyone.</li>
+                                <li>No friction for other employees for an already solved problem.</li>
+                                <li>Less internal support tickets by accessing information faster.</li>
+                                <li>No idea is a bad idea, discuss on a domain-specific problem across the team and Keep it alive for future employees.</li>
+                                <li>Ask for the right approach from the expert across borders.</li>
+                                <li>Stuck on a issue, probably somebody has solved it before.</li>
+                                <li>Cross-team bonding.</li>
+                                <li>For fun: One team's outing can be a lesson for another. Example: Was Thailand a good time to go now? Are there any options for veg? Is cash used more or card?</li>
+                                <li>Contractors bring outside expertise into your organization and free up your time, ideally. One of the challenges of working with contractors is making sure they know what they need to know to successfully complete a project without taking up too much of your team’s time.</li>
+                                <li>Boost in productivity: By saving time.</li>
+                                <li>Share knowledge across the company in a fun and exciting way.</li>
+                                <li>Motivate your team by giving them the chance to show off their good work.</li>
+                            </ul>
+                            <h4>For Remote Teams</h4>
+                            <ul>
+                                <li>Unlike office workers, remote employees don’t have the ability to tap their colleagues when they need help. To do remote work well, knowledge should be easily accessible to anyone, wherever they are in the world.</li>
+                                <li>Easy onboarding for new joiners.</li>
+                                <li>Not have to go through old chats to find out a solution.</li>
+                                <li>Don't have to lose context on a topic as it happens on chat – Discuss a topic without losing context.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ie nm reveal-fade">
+                <div class="tcontainern">
+                    <div class="it rf sa sf">
+                        <!-- <ul class="iv">
+                            <li><img src="./clients-01.svg" alt="Clients 01"></li>
+                            <li><img src="./clients-02.svg" alt="Clients 02"></li>
+                            <li><img src="./clients-03.svg" alt="Clients 03"></li>
+                            <li><img src="./clients-04.svg" alt="Clients 04"></li>
+                            <li><img src="./clients-05.svg" alt="Clients 05"></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </section>
+            <section class="r_ nm sl" id="about">
+                <div class="tcontainern">
+                    <div class="team-inner rf">
+                        <div class="rl sl reveal-scale-down">
+                            <div class="scontainero">
+                                <h2 class="sd of">Meet the team</h2>
+                                <p class="sp">Talent wins games, but teamwork and intelligence win championships.</p>
+                            </div>
+                        </div>
+                        <div class="tiles-wrap">
+                            <div class="nh reveal-scale-down" data-reveal-container=".tiles-wrap" data-reveal-delay="200">
+                                <div class="np">
+                                    <div class="team-item-header">
+                                        <div class="team-item-image od fillustration-element-l cillustration-element-h"><img src="./hardik2.jpg" alt="Team member 03" width="190" height="190"></div>
+                                    </div>
+                                    <div class="team-item-content">
+                                        <h5 class="team-item-name sd sx">Hardik Jain</h5>
+                                        <div class="ic c iw sz">Founder &amp; CEO</div>
+                                        <p class="sp l">A frontend developer who worked with Flipkart, Treebo, FanBytes and more. A victim of this problem.</p>
+                                        <div class="rs">
+                                            <ul class="iv">
+                                                <li>
+                                                    <a href="https://twitter.com/hardikjain29">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <title>Twitter</title>
+                                                            <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"></path>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.linkedin.com/in/hardikjain29/">
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <title>LinkedIn</title>
+                                                            <path d="M15.3 0H.7C.3 0 0 .3 0 .7v14.7c0 .3.3.6.7.6h14.7c.4 0 .7-.3.7-.7V.7c-.1-.4-.4-.7-.8-.7zM4.7 13.6H2.4V6h2.4v7.6h-.1zM3.6 5c-.8 0-1.4-.7-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4-.1.7-.7 1.4-1.4 1.4zm10 8.6h-2.4V9.9c0-.9 0-2-1.2-2s-1.4 1-1.4 2v3.8H6.2V6h2.3v1c.3-.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v4.2h.1z"></path>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="nh reveal-scale-down" data-reveal-container=".tiles-wrap">
+                                <div class="np">
+                                    <div class="team-item-header">
+                                        <div class="team-item-image od"><img src="./team-member-01.jpg" alt="Team member 01" width="190" height="190"></div>
+                                    </div>
+                                    <div class="team-item-content">
+                                        <h5 class="team-item-name sd sx">Markus Hasinika</h5>
+                                        <div class="ic c iw sz">Founder &amp; CEO</div>
+                                        <p class="sp l">Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nh reveal-scale-down" data-reveal-container=".tiles-wrap" data-reveal-delay="100">
+                                <div class="np">
+                                    <div class="team-item-header">
+                                        <div class="team-item-image od"><img src="./team-member-02.jpg" alt="Team member 02" width="190" height="190"></div>
+                                    </div>
+                                    <div class="team-item-content">
+                                        <h5 class="team-item-name sd sx">Markus Hasinika</h5>
+                                        <div class="ic c iw sz">Founder &amp; CEO</div>
+                                        <p class="sp l">Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nh reveal-scale-down" data-reveal-container=".tiles-wrap" data-reveal-delay="200">
+                                <div class="np">
+                                    <div class="team-item-header">
+                                        <div class="team-item-image od fillustration-element-l cillustration-element-h"><img src="./team-member-03.jpg" alt="Team member 03" width="190" height="190"></div>
+                                    </div>
+                                    <div class="team-item-content">
+                                        <h5 class="team-item-name sd sx">Markus Hasinika</h5>
+                                        <div class="ic c iw sz">Founder &amp; CEO</div>
+                                        <p class="sp l">Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nh reveal-scale-down" data-reveal-container=".tiles-wrap" data-reveal-delay="300">
+                                <div class="np">
+                                    <div class="team-item-header">
+                                        <div class="team-item-image od pillustration-element-d villustration-element-m"><img src="./team-member-04.jpg" alt="Team member 04" width="190" height="190"></div>
+                                    </div>
+                                    <div class="team-item-content">
+                                        <h5 class="team-item-name sd sx">Markus Hasinika</h5>
+                                        <div class="ic c iw sz">Founder &amp; CEO</div>
+                                        <p class="sp l">Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nh reveal-scale-down" data-reveal-container=".tiles-wrap" data-reveal-delay="400">
+                                <div class="np">
+                                    <div class="team-item-header">
+                                        <div class="team-item-image od"><img src="./team-member-05.jpg" alt="Team member 05" width="190" height="190"></div>
+                                    </div>
+                                    <div class="team-item-content">
+                                        <h5 class="team-item-name sd sx">Markus Hasinika</h5>
+                                        <div class="ic c iw sz">Founder &amp; CEO</div>
+                                        <p class="sp l">Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nh reveal-scale-down" data-reveal-container=".tiles-wrap" data-reveal-delay="500">
+                                <div class="np">
+                                    <div class="team-item-header">
+                                        <div class="team-item-image od"><img src="./team-member-06.jpg" alt="Team member 01" width="190" height="190"></div>
+                                    </div>
+                                    <div class="team-item-content">
+                                        <h5 class="team-item-name sd sx">Markus Hasinika</h5>
+                                        <div class="ic c iw sz">Founder &amp; CEO</div>
+                                        <p class="sp l">Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="rq r ih sl uillustration-section-a">
+                <div class="tcontainern">
+                    <div class="ip rf reveal-scale-down">
+                        <div class="rj">
+                            <div class="scontainero">
+                                <h2 class="sd sz usecase">Relate with any of the usecase?</h2>
+                                <form action="https://letshudddle.us19.list-manage.com/subscribe/post?u=bb592488ae2fcb73455bc4bd2&amp;id=c6bef885cb" method="get" id="mc-embedded-subscribe-form-footer" name="mc-embedded-subscribe-form" class="validate" novalidate>
+                                    <div class="tf" data-reveal-delay="200">
+                                        <input type="email" value="" name="EMAIL" class="k" id="mce-EMAIL-footer" placeholder="Your best email.." required>
+                                        <input type="hidden" value="footer" name="FNAME" class="" id="mce-FNAME-footer" />
+                                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe-footer" class="tbuttonn fbuttonl footer-access-button">Early access</button>
+                                    </div>
+                                    <div id="message-footer">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="nq ap r">
+            <div class="tcontainern">
+                <div class="nz">
+                    <div class="re ru h">
+                        <div class="ng">
+                            <a href="./index.html"><img src="./logo.svg" alt="Sketch" width="32" height="32"></a>
+                        </div>
+                        <div class="rs">
+                            <ul class="iv">
+                                <li>
+                                    <a href="https://twitter.com/hardikjain29">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Twitter</title>
+                                            <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rt ru h ra">
+                        <nav class="ro">
+                            <ul class="iv">
+                                <li><a href="#about">Contact</a></li>
+                                <li><a href="#about">About us</a></li>
+                            </ul>
+                        </nav>
+                        <div class="footer-copyright">© 2020 Huddle, all rights reserved</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./main.min(1).js"></script>
+    <script src="./mailchimp.js"></script>
+    <script async="" src="./js"></script>
+</body>
+
+</html>

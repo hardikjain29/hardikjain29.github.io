@@ -2527,7 +2527,7 @@ ul.pricing-item-features-list li {
     width: 100%;
     max-width: 100%;
     height: 443px;
-    background-image: url(../images/illustration-section-01.svg);
+    background-image: url(./illustration-section-01.svg);
     background-repeat: no-repeat;
     background-size: auto;
     left: 50%;
@@ -2542,7 +2542,7 @@ ul.pricing-item-features-list li {
     width: 100%;
     max-width: 100%;
     height: 663px;
-    background-image: url(../images/illustration-section-02.svg);
+    background-image: url(./illustration-section-02.svg);
     background-repeat: no-repeat;
     background-size: auto;
     left: 50%;
@@ -2557,7 +2557,7 @@ ul.pricing-item-features-list li {
     width: 100%;
     max-width: 100%;
     height: 274px;
-    background-image: url(../images/illustration-section-03.svg);
+    background-image: url(./illustration-section-03.svg);
     background-repeat: no-repeat;
     background-size: auto;
     left: 50%;
@@ -2572,7 +2572,7 @@ ul.pricing-item-features-list li {
     width: 100%;
     max-width: 100%;
     height: 160px;
-    background-image: url(../images/illustration-section-04.svg);
+    background-image: url(./illustration-section-04.svg);
     background-repeat: no-repeat;
     background-size: auto;
     left: 50%;
@@ -2587,7 +2587,7 @@ ul.pricing-item-features-list li {
     width: 200%;
     max-width: 200%;
     height: 274px;
-    background-image: url(../images/illustration-section-05.svg);
+    background-image: url(./illustration-section-05.svg);
     background-repeat: no-repeat;
     background-size: auto;
     left: 50%;
@@ -2602,7 +2602,7 @@ ul.pricing-item-features-list li {
     width: 100%;
     max-width: 100%;
     height: 274px;
-    background-image: url(../images/illustration-section-06.svg);
+    background-image: url(./illustration-section-06.svg);
     background-repeat: no-repeat;
     background-size: auto;
     left: 50%;
@@ -2617,7 +2617,7 @@ ul.pricing-item-features-list li {
     width: 200%;
     max-width: 200%;
     height: 200%;
-    background-image: url(../images/illustration-element-01.svg);
+    background-image: url(./illustration-element-01.svg);
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
@@ -2632,7 +2632,7 @@ ul.pricing-item-features-list li {
     width: 100vw;
     max-width: 100vw;
     height: 120%;
-    background-image: url(../images/illustration-element-01b.svg);
+    background-image: url(./illustration-element-01b.svg);
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
@@ -2651,7 +2651,7 @@ ul.pricing-item-features-list li {
     width: 200%;
     max-width: 200%;
     height: 200%;
-    background-image: url(../images/illustration-element-02.svg);
+    background-image: url(./illustration-element-02.svg);
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
@@ -2666,7 +2666,7 @@ ul.pricing-item-features-list li {
     width: 200%;
     max-width: 200%;
     height: 200%;
-    background-image: url(../images/illustration-element-03.svg);
+    background-image: url(./illustration-element-03.svg);
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
@@ -2681,7 +2681,7 @@ ul.pricing-item-features-list li {
     width: 200%;
     max-width: 200%;
     height: 200%;
-    background-image: url(../images/illustration-element-04.svg);
+    background-image: url(./illustration-element-04.svg);
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
@@ -2696,7 +2696,7 @@ ul.pricing-item-features-list li {
     width: 200%;
     max-width: 200%;
     height: 200%;
-    background-image: url(../images/illustration-element-05.svg);
+    background-image: url(./illustration-element-05.svg);
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
@@ -2713,7 +2713,7 @@ ul.pricing-item-features-list li {
     width: 200%;
     max-width: 200%;
     height: 200%;
-    background-image: url(../images/illustration-element-06.svg);
+    background-image: url(./illustration-element-06.svg);
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
@@ -2729,7 +2729,7 @@ ul.pricing-item-features-list li {
     width: 200%;
     max-width: 200%;
     height: 200%;
-    background-image: url(../images/illustration-element-07.svg);
+    background-image: url(./illustration-element-07.svg);
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
@@ -2746,7 +2746,7 @@ ul.pricing-item-features-list li {
     width: 300%;
     max-width: 300%;
     height: 300%;
-    background-image: url(../images/illustration-element-08.svg);
+    background-image: url(./illustration-element-08.svg);
     background-repeat: no-repeat;
     background-size: contain;
     left: 50%;
@@ -3051,7 +3051,7 @@ ul.pricing-item-features-list li.is-checked::after {
     padding-left: 16px;
     padding-right: 16px;
     background-color: #3F52FF;
-    background-image: url(../images/cta-illustration.svg);
+    background-image: url(./cta-illustration.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 30px
