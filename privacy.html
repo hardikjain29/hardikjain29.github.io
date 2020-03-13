@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" class="js js-focus-visible">
+<style type="text/css">
+    #relay-desktop-button {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 28px !important;
+        background-color: #2b2b30 !important;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
+        position: fixed !important;
+        cursor: pointer !important;
+        z-index: 9999999999 !important;
+        border: none !important;
+        outline: none !important;
+        min-width: 56px !important;
+        max-width: 56px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        -webkit-transition: -webkit-transform 0.3s ease-in-out;
+        -ms-transition: -ms-transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    #relay-mobile-button {
+        outline: none !important;
+        border: none !important;
+        width: 30% !important;
+        max-width: 300px;
+        position: fixed !important;
+        left: 50%;
+        margin: 0 0 0 -15% !important;
+        font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+        background-color: #2b2b30 !important;
+        color: white !important;
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 18px !important;
+        padding: 5px 0 !important;
+        height: 20px !important;
+        border-top-left-radius: 5px !important;
+        border-top-right-radius: 5px !important;
+        z-index: 214748364 !important;
+        padding: 0 !important;
+        right: initial !important;
+        top: initial !important;
+    }
+    
+    #relay-mobile-button div {
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 15px !important;
+        position: relative !important;
+        /* bottom: 5px; */
+        background-color: #2b2b30 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    #relay-mobile-button .relay-img {
+        width: 15px !important;
+    }
+    
+    #relay-mobile-button:active {
+        color: #37db6b !important;
+    }
+    
+    #relay-desktop-button:focus {
+        outline: none !important;
+        border: none !important;
+    }
+    
+    #relay-desktop-button img {
+        color: #37db6b !important;
+        border: none !important;
+        outline: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: transparent !important;
+    }
+    
+    .relay-img {
+        width: 25px !important;
+    }
+    
+    #relay-desktop-button.minimized {
+        transform: rotate(-45deg) !important;
+        -ms-transform: rotate(-45deg) !important;
+        -webkit-transform: rotate(-45deg) !important;
+    }
+    
+    #relay-mobile-button.minimized.unread::after {
+        content: attr(data-unread) !important;
+        background: #37db6b !important;
+        color: #2b2b30 !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        width: 16px !important;
+        display: flex !important;
+        font-family: Roboto !important;
+        position: absolute !important;
+        height: 16px !important;
+        border-radius: 8px !important;
+        top: 2px !important;
+        right: 4px !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    #relay-desktop-button.unread::after {
+        content: attr(data-unread) !important;
+        background: #37db6b !important;
+        color: #2b2b30 !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        width: 16px !important;
+        display: flex !important;
+        font-family: Roboto !important;
+        position: absolute !important;
+        height: 16px !important;
+        border-radius: 8px !important;
+        right: 0 !important;
+        top: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    #relay-desktop-button.minimized.unread::after {
+        transform: rotate(45deg);
+        right: -8px !important;
+        top: auto !important;
+    }
+</style>
+<style type="text/css">
+    #relay-wrapper.mobile.open {
+        -ms-transform: translateY(-100vh);
+        /* IE 9 */
+        -webkit-transform: translateY(-100vh);
+        /* Safari */
+        transform: translateY(-100vh);
+        visibility: visible;
+    }
+    
+    #relay-wrapper.mobile {
+        transition: all 0.2s ease-out;
+        height: 100vh !important;
+        top: 100vh !important;
+    }
+    
+    #relay-wrapper.mobile.closed {
+        visibility: hidden !important;
+    }
+    
+    #relay-wrapper {
+        display: visible !important;
+    }
+    
+    .toastify {
+        font-size: 14px;
+        font-family: Roboto !important;
+        color: #37db6b !important;
+        box-shadow: 0 1px 2px -2px #b3b3bc, 0 -1px 2px -2px #b3b3bc;
+        justify-content: space-between;
+        display: flex !important;
+        max-width: 400px !important;
+        align-items: center;
+    }
+    
+    .toastify p {
+        margin: 0 !important;
+        word-break: break-all !important;
+        line-height: 18px !important;
+        text-overflow: ellipsis !important;
+        overflow-x: hidden !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    .toast-close {
+        opacity: 0.6 !important;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 10px !important;
+    }
+    
+    .toastify-avatar {
+        margin: 0 20px 0 0 !important;
+        height: 16px !important;
+    }
+    
+    @media only screen and (max-width: 400px) {
+        .toastify-right {
+            right: 0px !important;
+        }
+        .toastify {
+            max-width: 100% !important;
+        }
+    }
+</style>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A company internal questions and answers platform. An automated knowledgebase platform.">
+    <meta name="keywords" content="Q&A, question and answers, platform, knowledgebase, internal, B2B, comapny, hudddle, letshudddle">
+    <meta name="author" content="Hardik Jain">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/png" href="./logo-blue@2x.png" sizes="32x32">
+    <title>Privacy Policy</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" async="" src="./analytics.js"></script>
+    <link rel="stylesheet" href="./style(1).css">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111669534-3');
+    </script>
+    <style>
+        .sub-pricing-title {
+          font-size: 12px;
+          color: #bfbfbf;
+          padding-bottom: 4px;
+        }
+        .custom-pricing {
+          font-size: 30px;
+          padding-top: 26px;
+          color: #1d2238;
+          padding-bottom: 26px;
+        }
+        .pricing-email {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .footer-access {
+          padding-left: 262px;
+          padding-right: 260px;
+        }
+        .footer-access-button {
+          background-color: #07c5f1;
+        }
+        .message-right {
+            text-align: left;
+            padding-left: 90px;
+        }
+        .usecase {
+            padding-bottom: 20px;
+        }
+      </style>
+    <style type="text/css">
+        @font-face {
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 400;
+            font-style: italic;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 500;
+            font-style: normal;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 500;
+            font-style: italic;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 700;
+            font-style: normal;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 700;
+            font-style: italic;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 900;
+            font-style: normal;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 900;
+            font-style: italic;
+            font-family: 'Inter-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
+        }
+    </style>
+</head>
+
+<body class="t n" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+    <div class="nj">
+        <header class="nd">
+            <div class="tcontainern">
+                <div class="ny">
+                    <div class="ng">
+                        <h1 class="sp"><a href="./index.html"><img src="./logo-white-1.svg" alt="Sketch" width="48" height="48"></a></h1></div>
+                    <button id="tl" class="tl" aria-controls="primary-menu" aria-expanded="false"><span class="id">Menu</span> <span class="tc"><span class="th"></span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="nv">
+            <section class="rd nm sl tillustration-section-n">
+                <div class="rcontaineri">
+                    <div class="rc rf">
+                        <div class="rh">
+                            <div class="scontainero">
+                                <h1 class="sp reveal-scale-down">Privacy Policy</h1></div>
+                        </div>
+                        <!-- <div class="rp tillustration-element-n reveal-scale-down" data-reveal-delay="100">
+                            <a class="modal-trigger" aria-controls="modal-03" data-video="https://player.vimeo.com/video/174002812" data-video-tag="iframe" href="https://preview.cruip.com/sketch/additional.html#"><img class="su" src="./video-placeholder.png" alt="Video" width="896" height="502"></a>
+                        </div>
+                        <div id="modal-03" class="tb tw">
+                            <div class="tx">
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+            <section class="nm cillustration-section-h">
+                <div class="tcontainern">
+                    <div class="rf sa">
+                        <div class="scontainero">
+                            <p>Your privacy is important to us. It is Huddle Inc.'s policy to respect your privacy regarding any information we may collect from you across our website, <a href="https://letshuddle.com">https://letshuddle.com</a>, and other sites we own and operate.</p>
+                            <p>We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</p>
+                            <p>We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.</p>
+                            <p>We don’t share any personally identifying information publicly or with third-parties, except when required to by law.</p>
+                            <p>Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.</p>
+                            <p>You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.</p>
+                            <p>Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.</p>
+                            <p>This policy is effective as of 9 March 2020.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="nq ap r">
+            <div class="tcontainern">
+                <div class="nz">
+                    <div class="re ru h">
+                        <div class="ng">
+                            <a href="./index.html"><img src="./logo-white.svg" alt="Sketch" width="48" height="48"></a>
+                        </div>
+                        <div class="rs">
+                            <ul class="iv">
+                                <li>
+                                    <a href="https://twitter.com/hardikjain29">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <title>Twitter</title>
+                                            <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rt ru h ra">
+                        <nav class="ro">
+                            <ul class="iv">
+                                <li><a href="./usecases.html#about">Contact</a></li>
+                                <li><a href="./usecases.html#about">About us</a></li>
+                                <li><a href="./terms.html">Terms of service</a></li>
+                                <li><a href="./privacy.html">Privacy Policy</a></li>
+                            </ul>
+                        </nav>
+                        <div class="footer-copyright">© 2020 Huddle, all rights reserved</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./main.min(1).js"></script>
+    <script src="./mailchimp.js"></script>
+    <script async="" src="./js"></script>
+</body>
+
+</html>
